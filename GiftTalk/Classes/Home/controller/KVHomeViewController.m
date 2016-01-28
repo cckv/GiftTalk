@@ -15,6 +15,8 @@
 #import "KVNewlifeViewController.h"
 #import "KVCommentViewController.h"
 
+#import "KVAnimationView.h"
+#import "KVHtmlViewController.h"
 
 #define titleButtonW 80
 #define titleBtnCount 5
@@ -24,6 +26,8 @@ static int const titleViewH = 30;
 @property (nonatomic,weak) UIScrollView *scrollView;
 @property (nonatomic,weak) KVTitleButton *selTitleButton;
 @property (nonatomic,weak) UIView *bottomLine;
+
+@property (nonatomic,weak) KVAnimationView *animationView;
 @end
 
 @implementation KVHomeViewController
@@ -43,9 +47,45 @@ static int const titleViewH = 30;
     
     // 添加自控制器
     [self addChildVc];
+    
+    // 添加小动画
+    [self addAnimationView];
+    
+    // 监听通知
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(timo) name:@"timo" object:nil];
 }
 
 #pragma mark - 初始化方法
+// 添加小人物
+- (void)addAnimationView
+{
+    KVAnimationView *myView = [[KVAnimationView alloc]init];
+    self.animationView = myView;
+    myView.frame = CGRectMake(-30, 100, 60, 60);
+    [self.view addSubview:myView];
+    myView.layer.cornerRadius = myView.bounds.size.width * 0.5;
+    myView.layer.masksToBounds = YES;
+    myView.backgroundColor = [UIColor redColor];
+    
+    // 添加图片
+    UIImageView *bjView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"timo"]];
+    [myView addSubview:bjView];
+    bjView.frame = myView.bounds;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(timoClick)];
+    [myView addGestureRecognizer:tap];
+    
+    
+}
+// 点击提莫
+- (void)timoClick
+{
+    KVHtmlViewController *htmlVc = [[KVHtmlViewController alloc]init];
+    htmlVc.urlStr = @"http://baike.baidu.com/link?url=SkCjHJp3Db3pIS_JLwaIIT1x3bZwZS0_yAplQdm6muUvQU63v8TyPPhb0-RtE5hU1jzOnCfdmcPyQ-Wfh4hzsCr2Fnc8hjPx9UfC27w0E2WQCUmYIJzUWBMS7gvochY-";
+    [self.navigationController pushViewController:htmlVc animated:YES];
+}
+
+// 添加所有的子控制器
 - (void)addChildVc
 {
     [self addChildViewController:[[KVEssionViewController alloc]init]];
@@ -180,10 +220,36 @@ static int const titleViewH = 30;
 #pragma mark - 代理方法
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
+    CGFloat animationViewX = self.animationView.frame.origin.x;
+    CGFloat curX = 0;
+    if (animationViewX <= 0) {
+        curX = -30;
+    }else
+    {
+        curX = [UIScreen mainScreen].bounds.size.width - 30;
+    }
+    self.animationView.frame = CGRectMake(curX, self.animationView.frame.origin.y, 60, 60);
+    
     CGFloat offsetX = scrollView.contentOffset.x;
 
     NSInteger index = offsetX / GTScreenWidth;
     KVTitleButton *titleBtn = self.titleView.subviews[index];
     [self titleBtnClick:titleBtn];
+    
+    [self.view layoutIfNeeded];
+}
+- (void)timo
+{
+    CGFloat animationViewX = self.animationView.frame.origin.x;
+
+    CGFloat curX = 0;
+    if (animationViewX <= 0) {
+        curX = -30;
+    }else
+    {
+        curX = [UIScreen mainScreen].bounds.size.width - 30;
+    }
+    self.animationView.frame = CGRectMake(curX, self.animationView.frame.origin.y, 60, 60);
+    [self.view layoutIfNeeded];
 }
 @end

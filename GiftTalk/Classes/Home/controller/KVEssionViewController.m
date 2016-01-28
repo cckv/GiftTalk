@@ -234,4 +234,18 @@
 {
     NSLog(@"%s",__func__);
 }
+
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+//{
+//    [[NSNotificationCenter defaultCenter]postNotificationName:@"timo" object:nil];
+//    
+//}
+//- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView
+//{
+//    [[NSNotificationCenter defaultCenter]postNotificationName:@"timo" object:nil];
+//}
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"timo" object:nil];
+}
 @end

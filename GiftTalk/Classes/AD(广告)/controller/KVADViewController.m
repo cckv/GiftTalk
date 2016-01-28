@@ -13,11 +13,15 @@ static NSString * const code2 = @"phcqnauGuHYkFMRquANhmgN_IauBThfqmgKsUARhIWdGUL
 #import "KVTabBarViewController.h"
 
 @interface KVADViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *tishiLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *lunchImageView;
 @property (weak, nonatomic) IBOutlet UIView *adView;
 @property (weak, nonatomic) IBOutlet UIButton *jumpBtn;
 
 @property (nonatomic,strong) KVAdItem *adItems;
+
+/** 定时器*/
+@property (nonatomic, weak) NSTimer *timer;
 @end
 
 @implementation KVADViewController
@@ -27,15 +31,44 @@ static NSString * const code2 = @"phcqnauGuHYkFMRquANhmgN_IauBThfqmgKsUARhIWdGUL
     
     [self setupLaunchImage];
     
+    // 提示
+    self.tishiLabel.font = [UIFont setFontSize];
     
     // 获取广告的网络数据
     [self getData];
+    
+    // 添加定时器
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timeChange) userInfo:nil repeats:YES];
+    
+
+}
+#pragma mark - 定时器
+// 每隔一秒调用
+- (void)timeChange{
+    
+    // 定义广告时间
+    static int time = 3;
+    
+    // 时间到了,跳转
+    if (time == 0) {
+        [self jump:nil];
+    }
+    
+    // 时间减少
+    time--;
+    
+    // 设置跳转按钮标题
+    [_jumpBtn setTitle:[NSString stringWithFormat:@" 跳过(%d) ",time] forState:UIControlStateNormal];
+    
 }
 // 点击按钮进入软件
 - (IBAction)jump:(id)sender {
-    
+    // 跟换跟控制器
     KVTabBarViewController *tabBarVc = [[KVTabBarViewController alloc]init];
     [UIApplication sharedApplication].keyWindow.rootViewController = tabBarVc;
+    
+    // 销毁定时器
+    [_timer invalidate];
 }
 // 获取网路数据
 - (void)getData

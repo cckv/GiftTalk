@@ -58,6 +58,7 @@
 		A868C34F1C43D5C00013258B /* KVAdItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A868C34E1C43D5C00013258B /* KVAdItem.m */; };
 		A870FD711C1925BA003C1214 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = A870FD701C1925BA003C1214 /* UIImage+Image.m */; };
 		A870FD741C1925C5003C1214 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = A870FD731C1925C5003C1214 /* UIView+Frame.m */; };
+		A871EB4E1C5A037F00DF92AD /* KVAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = A871EB4D1C5A037F00DF92AD /* KVAnimationView.m */; };
 		A879D5A61C473EA600956D1D /* UIFont+KVFont.m in Sources */ = {isa = PBXBuildFile; fileRef = A879D5A51C473EA600956D1D /* UIFont+KVFont.m */; };
 		A888C2AF1C47C98400B1C0E4 /* KVMeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A888C2AE1C47C98400B1C0E4 /* KVMeNavigationController.m */; };
 		A8A475DB1C186D65007391F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8A475D91C186D65007391F8 /* Main.storyboard */; };
@@ -188,6 +189,8 @@
 		A870FD701C1925BA003C1214 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
 		A870FD721C1925C5003C1214 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		A870FD731C1925C5003C1214 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		A871EB4C1C5A037F00DF92AD /* KVAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVAnimationView.h; sourceTree = "<group>"; };
+		A871EB4D1C5A037F00DF92AD /* KVAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVAnimationView.m; sourceTree = "<group>"; };
 		A879D5A41C473EA600956D1D /* UIFont+KVFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+KVFont.h"; sourceTree = "<group>"; };
 		A879D5A51C473EA600956D1D /* UIFont+KVFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+KVFont.m"; sourceTree = "<group>"; };
 		A888C2AD1C47C98400B1C0E4 /* KVMeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVMeNavigationController.h; sourceTree = "<group>"; };
@@ -618,6 +621,8 @@
 				A8D718F01C4252DB00480034 /* KVHomeCell.xib */,
 				A8D86C311C41F0A600AF0F33 /* KVTitleButton.h */,
 				A8D86C321C41F0A600AF0F33 /* KVTitleButton.m */,
+				A871EB4C1C5A037F00DF92AD /* KVAnimationView.h */,
+				A871EB4D1C5A037F00DF92AD /* KVAnimationView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -993,6 +998,7 @@
 				A85441201C47D664006251B7 /* KVSettingViewController.m in Sources */,
 				A8A4760C1C187012007391F8 /* KVMeViewController.m in Sources */,
 				A86338801C414CFE00259A74 /* GTCategoryView.m in Sources */,
+				A871EB4E1C5A037F00DF92AD /* KVAnimationView.m in Sources */,
 				A8A4761E1C18756C007391F8 /* KVTabBar.m in Sources */,
 				A83C16E81C42075300DFA6B2 /* KVHeaderItem.m in Sources */,
 				A8F209551C428DAB00A4D222 /* KVTacticCell.m in Sources */,

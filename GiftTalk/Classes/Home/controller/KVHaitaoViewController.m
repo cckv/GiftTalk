@@ -103,4 +103,9 @@
         return @{@"Template":@"template"};
     }];
 }
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"timo" object:nil];
+}
 @end
