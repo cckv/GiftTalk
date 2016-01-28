@@ -1,0 +1,43 @@
+//
+//  GiftTalk.pch
+//  GiftTalk
+//
+//  Created by kv on 16/1/9.
+//  Copyright © 2016年 kv. All rights reserved.
+//
+#ifdef __OBJC__
+
+#import <AFNetworking.h>
+#import <MJExtension.h>
+#import <SVProgressHUD.h>
+#import <UIImageView+WebCache.h>
+#import "UIView+Frame.h"
+#import "UIFont+KVFont.h"
+#import "UIImage+Image.h"
+
+
+#define GTWeakSelf typeof(self) weakSelf = self
+#define GTKeyWindow [UIApplication sharedApplication].keyWindow
+#define GTScreenWidth [UIScreen mainScreen].bounds.size.width
+#define GTScreenHeight [UIScreen mainScreen].bounds.size.height
+#define navigationBarH 64
+#define tabBarH 49
+#define KVMargin 10
+
+#define iPhone4 (GTScreenHeight == 480)
+#define iPhone5 (GTScreenHeight == 568)
+#define iPhone6 (GTScreenHeight == 667)
+#define iPhone6p (GTScreenHeight == 736)
+
+
+#define KVColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+#define GTRandomColor KVColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+#define GTTabBarButtonSize 25
+#pragma make --------------cckv----------------
+#import "GTCategoryItem.h"
+#import "GTSubCategoryItem.h"
+#pragma make --------------cckv----------------
+
+
+#endif

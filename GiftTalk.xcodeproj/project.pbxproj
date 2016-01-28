@@ -7,25 +7,254 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A8A475D21C186D65007391F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A475D11C186D65007391F8 /* main.m */; };
-		A8A475D51C186D65007391F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A475D41C186D65007391F8 /* AppDelegate.m */; };
-		A8A475D81C186D65007391F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A475D71C186D65007391F8 /* ViewController.m */; };
+		A83246EC1C47FD3D00E75CD1 /* KVRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A83246EA1C47FD3D00E75CD1 /* KVRegisterViewController.m */; };
+		A83246ED1C47FD3D00E75CD1 /* KVRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A83246EB1C47FD3D00E75CD1 /* KVRegisterViewController.xib */; };
+		A83246F01C47FD8000E75CD1 /* KVRgisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = A83246EF1C47FD8000E75CD1 /* KVRgisterView.m */; };
+		A83246F21C47FD9100E75CD1 /* KVRgisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A83246F11C47FD9100E75CD1 /* KVRgisterView.xib */; };
+		A83C16D91C41FC9200DFA6B2 /* KVEssionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A83C16D81C41FC9200DFA6B2 /* KVEssionViewController.m */; };
+		A83C16DC1C41FCAD00DFA6B2 /* KVHaitaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A83C16DB1C41FCAD00DFA6B2 /* KVHaitaoViewController.m */; };
+		A83C16DF1C41FCC500DFA6B2 /* KVLearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A83C16DE1C41FCC500DFA6B2 /* KVLearnViewController.m */; };
+		A83C16E21C41FCD600DFA6B2 /* KVNewlifeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A83C16E11C41FCD600DFA6B2 /* KVNewlifeViewController.m */; };
+		A83C16E51C41FD0400DFA6B2 /* KVCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A83C16E41C41FD0400DFA6B2 /* KVCommentViewController.m */; };
+		A83C16E81C42075300DFA6B2 /* KVHeaderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A83C16E71C42075300DFA6B2 /* KVHeaderItem.m */; };
+		A85441201C47D664006251B7 /* KVSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A854411E1C47D664006251B7 /* KVSettingViewController.m */; };
+		A85441211C47D664006251B7 /* KVSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A854411F1C47D664006251B7 /* KVSettingViewController.xib */; };
+		A85441241C47E215006251B7 /* KVLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = A85441231C47E215006251B7 /* KVLoginView.m */; };
+		A85441261C47E223006251B7 /* KVLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A85441251C47E223006251B7 /* KVLoginView.xib */; };
+		A85441291C47E5B5006251B7 /* KVOtherLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = A85441281C47E5B5006251B7 /* KVOtherLoginView.m */; };
+		A854412B1C47E5CC006251B7 /* KVOtherLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A854412A1C47E5CC006251B7 /* KVOtherLoginView.xib */; };
+		A86338701C414CFE00259A74 /* GTClassifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A86338491C414CFE00259A74 /* GTClassifyViewController.m */; };
+		A86338711C414CFE00259A74 /* GTFilterItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A863384B1C414CFE00259A74 /* GTFilterItem.m */; };
+		A86338721C414CFE00259A74 /* GTGiftDetailItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A863384D1C414CFE00259A74 /* GTGiftDetailItem.m */; };
+		A86338731C414CFE00259A74 /* GTGiftLeftTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A863384F1C414CFE00259A74 /* GTGiftLeftTVC.m */; };
+		A86338741C414CFE00259A74 /* GTHeadDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A86338511C414CFE00259A74 /* GTHeadDataItem.m */; };
+		A86338751C414CFE00259A74 /* GTRightCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A86338531C414CFE00259A74 /* GTRightCVC.m */; };
+		A86338761C414CFE00259A74 /* GTSelectGiftVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A86338551C414CFE00259A74 /* GTSelectGiftVC.m */; };
+		A86338771C414CFE00259A74 /* GTSelGiftItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A86338571C414CFE00259A74 /* GTSelGiftItem.m */; };
+		A86338781C414CFE00259A74 /* GTSubCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A86338591C414CFE00259A74 /* GTSubCategoryViewController.m */; };
+		A86338791C414CFE00259A74 /* GTSubGiftCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A863385B1C414CFE00259A74 /* GTSubGiftCollectionViewController.m */; };
+		A863387A1C414CFE00259A74 /* GTTacticViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A863385D1C414CFE00259A74 /* GTTacticViewController.m */; };
+		A863387B1C414CFE00259A74 /* headView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A863385E1C414CFE00259A74 /* headView.xib */; };
+		A863387C1C414CFE00259A74 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = A86338601C414CFE00259A74 /* Foundation+Log.m */; };
+		A863387D1C414CFE00259A74 /* GTCategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A86338621C414CFE00259A74 /* GTCategoryItem.m */; };
+		A863387E1C414CFE00259A74 /* GTSubCategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A86338641C414CFE00259A74 /* GTSubCategoryItem.m */; };
+		A863387F1C414CFE00259A74 /* NSDictionary+PropertyCode.m in Sources */ = {isa = PBXBuildFile; fileRef = A86338661C414CFE00259A74 /* NSDictionary+PropertyCode.m */; };
+		A86338801C414CFE00259A74 /* GTCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = A86338691C414CFE00259A74 /* GTCategoryView.m */; };
+		A86338811C414CFF00259A74 /* GTLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A863386B1C414CFE00259A74 /* GTLeftCell.m */; };
+		A86338821C414CFF00259A74 /* GTLeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A863386C1C414CFE00259A74 /* GTLeftCell.xib */; };
+		A86338831C414CFF00259A74 /* GTRightCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A863386E1C414CFE00259A74 /* GTRightCollectionCell.m */; };
+		A86338841C414CFF00259A74 /* GTRightCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A863386F1C414CFE00259A74 /* GTRightCollectionCell.xib */; };
+		A86338871C41564D00259A74 /* NSDictionary+PropertyCode.m in Sources */ = {isa = PBXBuildFile; fileRef = A86338861C41564D00259A74 /* NSDictionary+PropertyCode.m */; };
+		A863388A1C41570A00259A74 /* KVHotGiftItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A86338891C41570A00259A74 /* KVHotGiftItem.m */; };
+		A863388D1C41571F00259A74 /* KVHotSubGiftItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A863388C1C41571F00259A74 /* KVHotSubGiftItem.m */; };
+		A868C33E1C43CE2C0013258B /* KVADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A868C33C1C43CE2C0013258B /* KVADViewController.m */; };
+		A868C33F1C43CE2C0013258B /* KVADViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A868C33D1C43CE2C0013258B /* KVADViewController.xib */; };
+		A868C3471C43D2AC0013258B /* LaunchImage-700-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A868C3411C43D2AC0013258B /* LaunchImage-700-568h@2x.png */; };
+		A868C3481C43D2AC0013258B /* LaunchImage-700-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = A868C3421C43D2AC0013258B /* LaunchImage-700-Portrait@2x~ipad.png */; };
+		A868C3491C43D2AC0013258B /* LaunchImage-700-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = A868C3431C43D2AC0013258B /* LaunchImage-700-Portrait~ipad.png */; };
+		A868C34A1C43D2AC0013258B /* LaunchImage-700@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A868C3441C43D2AC0013258B /* LaunchImage-700@2x.png */; };
+		A868C34B1C43D2AC0013258B /* LaunchImage-800-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A868C3451C43D2AC0013258B /* LaunchImage-800-667h@2x.png */; };
+		A868C34C1C43D2AC0013258B /* LaunchImage-800-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A868C3461C43D2AC0013258B /* LaunchImage-800-Portrait-736h@3x.png */; };
+		A868C34F1C43D5C00013258B /* KVAdItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A868C34E1C43D5C00013258B /* KVAdItem.m */; };
+		A870FD711C1925BA003C1214 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = A870FD701C1925BA003C1214 /* UIImage+Image.m */; };
+		A870FD741C1925C5003C1214 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = A870FD731C1925C5003C1214 /* UIView+Frame.m */; };
+		A879D5A61C473EA600956D1D /* UIFont+KVFont.m in Sources */ = {isa = PBXBuildFile; fileRef = A879D5A51C473EA600956D1D /* UIFont+KVFont.m */; };
+		A888C2AF1C47C98400B1C0E4 /* KVMeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A888C2AE1C47C98400B1C0E4 /* KVMeNavigationController.m */; };
 		A8A475DB1C186D65007391F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8A475D91C186D65007391F8 /* Main.storyboard */; };
 		A8A475DD1C186D65007391F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8A475DC1C186D65007391F8 /* Assets.xcassets */; };
-		A8A475E01C186D65007391F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8A475DE1C186D65007391F8 /* LaunchScreen.storyboard */; };
+		A8A476051C186DA5007391F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A475FE1C186DA5007391F8 /* AppDelegate.m */; };
+		A8A476061C186DA5007391F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A476001C186DA5007391F8 /* main.m */; };
+		A8A476091C186F7B007391F8 /* KVTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A476081C186F7B007391F8 /* KVTabBarViewController.m */; };
+		A8A4760C1C187012007391F8 /* KVMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A4760B1C187012007391F8 /* KVMeViewController.m */; };
+		A8A4760F1C187023007391F8 /* KVHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A4760E1C187023007391F8 /* KVHomeViewController.m */; };
+		A8A476121C187049007391F8 /* KVGiftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A476111C187049007391F8 /* KVGiftViewController.m */; };
+		A8A476181C1870D8007391F8 /* KVNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A476171C1870D8007391F8 /* KVNavigationController.m */; };
+		A8A4761E1C18756C007391F8 /* KVTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A4761D1C18756C007391F8 /* KVTabBar.m */; };
+		A8A476211C187AD3007391F8 /* KVButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A476201C187AD3007391F8 /* KVButton.m */; };
+		A8D718E91C423D1D00480034 /* KVHtmlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D718E71C423D1D00480034 /* KVHtmlViewController.m */; };
+		A8D718EA1C423D1D00480034 /* KVHtmlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8D718E81C423D1D00480034 /* KVHtmlViewController.xib */; };
+		A8D718ED1C4251F500480034 /* KVHomeCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D718EC1C4251F500480034 /* KVHomeCellItem.m */; };
+		A8D718F11C4252DB00480034 /* KVHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D718EF1C4252DB00480034 /* KVHomeCell.m */; };
+		A8D718F21C4252DB00480034 /* KVHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8D718F01C4252DB00480034 /* KVHomeCell.xib */; };
+		A8D718F71C4274C000480034 /* KVTacticItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D718F61C4274C000480034 /* KVTacticItem.m */; };
+		A8D718FA1C42755800480034 /* KVSubTacticItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D718F91C42755800480034 /* KVSubTacticItem.m */; };
+		A8D718FD1C4277DE00480034 /* KVCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D718FC1C4277DE00480034 /* KVCollectionViewCell.m */; };
+		A8D718FF1C4277F700480034 /* KVCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8D718FE1C4277F700480034 /* KVCollectionViewCell.xib */; };
+		A8D86C331C41F0A600AF0F33 /* KVTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D86C321C41F0A600AF0F33 /* KVTitleButton.m */; };
+		A8E141F11C477C310016FAFB /* KVSelCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E141EF1C477C310016FAFB /* KVSelCollectionViewCell.m */; };
+		A8E141F21C477C310016FAFB /* KVSelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8E141F01C477C310016FAFB /* KVSelCollectionViewCell.xib */; };
+		A8E141F61C4780850016FAFB /* KVSubGiftCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E141F41C4780850016FAFB /* KVSubGiftCollectionViewCell.m */; };
+		A8E141F71C4780850016FAFB /* KVSubGiftCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8E141F51C4780850016FAFB /* KVSubGiftCollectionViewCell.xib */; };
+		A8E141FF1C4788FE0016FAFB /* KVLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E141FD1C4788FE0016FAFB /* KVLoginViewController.m */; };
+		A8E142001C4788FE0016FAFB /* KVLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8E141FE1C4788FE0016FAFB /* KVLoginViewController.xib */; };
+		A8E142031C478D750016FAFB /* KVSelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E142021C478D750016FAFB /* KVSelButton.m */; };
+		A8E142051C479D300016FAFB /* KVMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8E142041C479D300016FAFB /* KVMeViewController.xib */; };
+		A8E203711C43F47400573174 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8E203701C43F47400573174 /* CoreFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A8F209551C428DAB00A4D222 /* KVTacticCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F209531C428DAB00A4D222 /* KVTacticCell.m */; };
+		A8F209561C428DAB00A4D222 /* KVTacticCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8F209541C428DAB00A4D222 /* KVTacticCell.xib */; };
+		A8F209841C4294F000A4D222 /* KVTacticDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F209831C4294F000A4D222 /* KVTacticDetailViewController.m */; };
+		A8F209871C429A7F00A4D222 /* KVTacticDetailItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F209861C429A7F00A4D222 /* KVTacticDetailItem.m */; };
+		A8F209901C429CF700A4D222 /* KVTacticDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F2098E1C429CF700A4D222 /* KVTacticDetailCell.m */; };
+		A8F209911C429CF700A4D222 /* KVTacticDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8F2098F1C429CF700A4D222 /* KVTacticDetailCell.xib */; };
+		E1346358650942BAB0F37317 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E68614FBE8B40E6123AB5818 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0094839F4CD977CDC3650182 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A83246E91C47FD3D00E75CD1 /* KVRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVRegisterViewController.h; sourceTree = "<group>"; };
+		A83246EA1C47FD3D00E75CD1 /* KVRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVRegisterViewController.m; sourceTree = "<group>"; };
+		A83246EB1C47FD3D00E75CD1 /* KVRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KVRegisterViewController.xib; sourceTree = "<group>"; };
+		A83246EE1C47FD8000E75CD1 /* KVRgisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVRgisterView.h; sourceTree = "<group>"; };
+		A83246EF1C47FD8000E75CD1 /* KVRgisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVRgisterView.m; sourceTree = "<group>"; };
+		A83246F11C47FD9100E75CD1 /* KVRgisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KVRgisterView.xib; sourceTree = "<group>"; };
+		A83C16D71C41FC9200DFA6B2 /* KVEssionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVEssionViewController.h; sourceTree = "<group>"; };
+		A83C16D81C41FC9200DFA6B2 /* KVEssionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVEssionViewController.m; sourceTree = "<group>"; };
+		A83C16DA1C41FCAD00DFA6B2 /* KVHaitaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVHaitaoViewController.h; sourceTree = "<group>"; };
+		A83C16DB1C41FCAD00DFA6B2 /* KVHaitaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVHaitaoViewController.m; sourceTree = "<group>"; };
+		A83C16DD1C41FCC500DFA6B2 /* KVLearnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVLearnViewController.h; sourceTree = "<group>"; };
+		A83C16DE1C41FCC500DFA6B2 /* KVLearnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVLearnViewController.m; sourceTree = "<group>"; };
+		A83C16E01C41FCD600DFA6B2 /* KVNewlifeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVNewlifeViewController.h; sourceTree = "<group>"; };
+		A83C16E11C41FCD600DFA6B2 /* KVNewlifeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVNewlifeViewController.m; sourceTree = "<group>"; };
+		A83C16E31C41FD0400DFA6B2 /* KVCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVCommentViewController.h; sourceTree = "<group>"; };
+		A83C16E41C41FD0400DFA6B2 /* KVCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVCommentViewController.m; sourceTree = "<group>"; };
+		A83C16E61C42075300DFA6B2 /* KVHeaderItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVHeaderItem.h; sourceTree = "<group>"; };
+		A83C16E71C42075300DFA6B2 /* KVHeaderItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVHeaderItem.m; sourceTree = "<group>"; };
+		A854411D1C47D664006251B7 /* KVSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVSettingViewController.h; sourceTree = "<group>"; };
+		A854411E1C47D664006251B7 /* KVSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVSettingViewController.m; sourceTree = "<group>"; };
+		A854411F1C47D664006251B7 /* KVSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KVSettingViewController.xib; sourceTree = "<group>"; };
+		A85441221C47E215006251B7 /* KVLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVLoginView.h; sourceTree = "<group>"; };
+		A85441231C47E215006251B7 /* KVLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVLoginView.m; sourceTree = "<group>"; };
+		A85441251C47E223006251B7 /* KVLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KVLoginView.xib; sourceTree = "<group>"; };
+		A85441271C47E5B5006251B7 /* KVOtherLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOtherLoginView.h; sourceTree = "<group>"; };
+		A85441281C47E5B5006251B7 /* KVOtherLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOtherLoginView.m; sourceTree = "<group>"; };
+		A854412A1C47E5CC006251B7 /* KVOtherLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KVOtherLoginView.xib; sourceTree = "<group>"; };
+		A86338451C414BA500259A74 /* GiftTalk.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GiftTalk.pch; path = category/GiftTalk.pch; sourceTree = "<group>"; };
+		A86338481C414CFE00259A74 /* GTClassifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTClassifyViewController.h; sourceTree = "<group>"; };
+		A86338491C414CFE00259A74 /* GTClassifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTClassifyViewController.m; sourceTree = "<group>"; };
+		A863384A1C414CFE00259A74 /* GTFilterItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTFilterItem.h; path = ../Controller/GTFilterItem.h; sourceTree = "<group>"; };
+		A863384B1C414CFE00259A74 /* GTFilterItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTFilterItem.m; path = ../Controller/GTFilterItem.m; sourceTree = "<group>"; };
+		A863384C1C414CFE00259A74 /* GTGiftDetailItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTGiftDetailItem.h; path = ../Controller/GTGiftDetailItem.h; sourceTree = "<group>"; };
+		A863384D1C414CFE00259A74 /* GTGiftDetailItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTGiftDetailItem.m; path = ../Controller/GTGiftDetailItem.m; sourceTree = "<group>"; };
+		A863384E1C414CFE00259A74 /* GTGiftLeftTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGiftLeftTVC.h; sourceTree = "<group>"; };
+		A863384F1C414CFE00259A74 /* GTGiftLeftTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGiftLeftTVC.m; sourceTree = "<group>"; };
+		A86338501C414CFE00259A74 /* GTHeadDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTHeadDataItem.h; path = ../Controller/GTHeadDataItem.h; sourceTree = "<group>"; };
+		A86338511C414CFE00259A74 /* GTHeadDataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTHeadDataItem.m; path = ../Controller/GTHeadDataItem.m; sourceTree = "<group>"; };
+		A86338521C414CFE00259A74 /* GTRightCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTRightCVC.h; sourceTree = "<group>"; };
+		A86338531C414CFE00259A74 /* GTRightCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTRightCVC.m; sourceTree = "<group>"; };
+		A86338541C414CFE00259A74 /* GTSelectGiftVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSelectGiftVC.h; sourceTree = "<group>"; };
+		A86338551C414CFE00259A74 /* GTSelectGiftVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTSelectGiftVC.m; sourceTree = "<group>"; };
+		A86338561C414CFE00259A74 /* GTSelGiftItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTSelGiftItem.h; path = ../Controller/GTSelGiftItem.h; sourceTree = "<group>"; };
+		A86338571C414CFE00259A74 /* GTSelGiftItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTSelGiftItem.m; path = ../Controller/GTSelGiftItem.m; sourceTree = "<group>"; };
+		A86338581C414CFE00259A74 /* GTSubCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSubCategoryViewController.h; sourceTree = "<group>"; };
+		A86338591C414CFE00259A74 /* GTSubCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTSubCategoryViewController.m; sourceTree = "<group>"; };
+		A863385A1C414CFE00259A74 /* GTSubGiftCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSubGiftCollectionViewController.h; sourceTree = "<group>"; };
+		A863385B1C414CFE00259A74 /* GTSubGiftCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTSubGiftCollectionViewController.m; sourceTree = "<group>"; };
+		A863385C1C414CFE00259A74 /* GTTacticViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTTacticViewController.h; sourceTree = "<group>"; };
+		A863385D1C414CFE00259A74 /* GTTacticViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTTacticViewController.m; sourceTree = "<group>"; };
+		A863385E1C414CFE00259A74 /* headView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = headView.xib; path = ../Controller/headView.xib; sourceTree = "<group>"; };
+		A86338601C414CFE00259A74 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		A86338611C414CFE00259A74 /* GTCategoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTCategoryItem.h; sourceTree = "<group>"; };
+		A86338621C414CFE00259A74 /* GTCategoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTCategoryItem.m; sourceTree = "<group>"; };
+		A86338631C414CFE00259A74 /* GTSubCategoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSubCategoryItem.h; sourceTree = "<group>"; };
+		A86338641C414CFE00259A74 /* GTSubCategoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTSubCategoryItem.m; sourceTree = "<group>"; };
+		A86338651C414CFE00259A74 /* NSDictionary+PropertyCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+PropertyCode.h"; sourceTree = "<group>"; };
+		A86338661C414CFE00259A74 /* NSDictionary+PropertyCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+PropertyCode.m"; sourceTree = "<group>"; };
+		A86338681C414CFE00259A74 /* GTCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTCategoryView.h; sourceTree = "<group>"; };
+		A86338691C414CFE00259A74 /* GTCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTCategoryView.m; sourceTree = "<group>"; };
+		A863386A1C414CFE00259A74 /* GTLeftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLeftCell.h; sourceTree = "<group>"; };
+		A863386B1C414CFE00259A74 /* GTLeftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLeftCell.m; sourceTree = "<group>"; };
+		A863386C1C414CFE00259A74 /* GTLeftCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTLeftCell.xib; sourceTree = "<group>"; };
+		A863386D1C414CFE00259A74 /* GTRightCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTRightCollectionCell.h; sourceTree = "<group>"; };
+		A863386E1C414CFE00259A74 /* GTRightCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTRightCollectionCell.m; sourceTree = "<group>"; };
+		A863386F1C414CFE00259A74 /* GTRightCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTRightCollectionCell.xib; sourceTree = "<group>"; };
+		A86338851C41564D00259A74 /* NSDictionary+PropertyCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+PropertyCode.h"; sourceTree = "<group>"; };
+		A86338861C41564D00259A74 /* NSDictionary+PropertyCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+PropertyCode.m"; sourceTree = "<group>"; };
+		A86338881C41570A00259A74 /* KVHotGiftItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVHotGiftItem.h; sourceTree = "<group>"; };
+		A86338891C41570A00259A74 /* KVHotGiftItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVHotGiftItem.m; sourceTree = "<group>"; };
+		A863388B1C41571F00259A74 /* KVHotSubGiftItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVHotSubGiftItem.h; sourceTree = "<group>"; };
+		A863388C1C41571F00259A74 /* KVHotSubGiftItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVHotSubGiftItem.m; sourceTree = "<group>"; };
+		A868C33B1C43CE2C0013258B /* KVADViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVADViewController.h; sourceTree = "<group>"; };
+		A868C33C1C43CE2C0013258B /* KVADViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVADViewController.m; sourceTree = "<group>"; };
+		A868C33D1C43CE2C0013258B /* KVADViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KVADViewController.xib; sourceTree = "<group>"; };
+		A868C3411C43D2AC0013258B /* LaunchImage-700-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700-568h@2x.png"; sourceTree = "<group>"; };
+		A868C3421C43D2AC0013258B /* LaunchImage-700-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		A868C3431C43D2AC0013258B /* LaunchImage-700-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700-Portrait~ipad.png"; sourceTree = "<group>"; };
+		A868C3441C43D2AC0013258B /* LaunchImage-700@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700@2x.png"; sourceTree = "<group>"; };
+		A868C3451C43D2AC0013258B /* LaunchImage-800-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-667h@2x.png"; sourceTree = "<group>"; };
+		A868C3461C43D2AC0013258B /* LaunchImage-800-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-Portrait-736h@3x.png"; sourceTree = "<group>"; };
+		A868C34D1C43D5C00013258B /* KVAdItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVAdItem.h; sourceTree = "<group>"; };
+		A868C34E1C43D5C00013258B /* KVAdItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVAdItem.m; sourceTree = "<group>"; };
+		A870FD6F1C1925BA003C1214 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
+		A870FD701C1925BA003C1214 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
+		A870FD721C1925C5003C1214 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		A870FD731C1925C5003C1214 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		A879D5A41C473EA600956D1D /* UIFont+KVFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+KVFont.h"; sourceTree = "<group>"; };
+		A879D5A51C473EA600956D1D /* UIFont+KVFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+KVFont.m"; sourceTree = "<group>"; };
+		A888C2AD1C47C98400B1C0E4 /* KVMeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVMeNavigationController.h; sourceTree = "<group>"; };
+		A888C2AE1C47C98400B1C0E4 /* KVMeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVMeNavigationController.m; sourceTree = "<group>"; };
 		A8A475CD1C186D65007391F8 /* GiftTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiftTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8A475D11C186D65007391F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A8A475D31C186D65007391F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A8A475D41C186D65007391F8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A8A475D61C186D65007391F8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A8A475D71C186D65007391F8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A8A475DA1C186D65007391F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8A475DC1C186D65007391F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A8A475DF1C186D65007391F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8A475E11C186D65007391F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8A475FD1C186DA5007391F8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A8A475FE1C186DA5007391F8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A8A476001C186DA5007391F8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A8A476071C186F7B007391F8 /* KVTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVTabBarViewController.h; sourceTree = "<group>"; };
+		A8A476081C186F7B007391F8 /* KVTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVTabBarViewController.m; sourceTree = "<group>"; };
+		A8A4760A1C187012007391F8 /* KVMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVMeViewController.h; sourceTree = "<group>"; };
+		A8A4760B1C187012007391F8 /* KVMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVMeViewController.m; sourceTree = "<group>"; };
+		A8A4760D1C187023007391F8 /* KVHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVHomeViewController.h; sourceTree = "<group>"; };
+		A8A4760E1C187023007391F8 /* KVHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVHomeViewController.m; sourceTree = "<group>"; };
+		A8A476101C187049007391F8 /* KVGiftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVGiftViewController.h; sourceTree = "<group>"; };
+		A8A476111C187049007391F8 /* KVGiftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVGiftViewController.m; sourceTree = "<group>"; };
+		A8A476161C1870D8007391F8 /* KVNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVNavigationController.h; sourceTree = "<group>"; };
+		A8A476171C1870D8007391F8 /* KVNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVNavigationController.m; sourceTree = "<group>"; };
+		A8A4761C1C18756C007391F8 /* KVTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVTabBar.h; sourceTree = "<group>"; };
+		A8A4761D1C18756C007391F8 /* KVTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVTabBar.m; sourceTree = "<group>"; };
+		A8A4761F1C187AD3007391F8 /* KVButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVButton.h; sourceTree = "<group>"; };
+		A8A476201C187AD3007391F8 /* KVButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVButton.m; sourceTree = "<group>"; };
+		A8D718E61C423D1D00480034 /* KVHtmlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KVHtmlViewController.h; path = ../Home/controller/KVHtmlViewController.h; sourceTree = "<group>"; };
+		A8D718E71C423D1D00480034 /* KVHtmlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KVHtmlViewController.m; path = ../Home/controller/KVHtmlViewController.m; sourceTree = "<group>"; };
+		A8D718E81C423D1D00480034 /* KVHtmlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KVHtmlViewController.xib; path = ../Home/controller/KVHtmlViewController.xib; sourceTree = "<group>"; };
+		A8D718EB1C4251F500480034 /* KVHomeCellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVHomeCellItem.h; sourceTree = "<group>"; };
+		A8D718EC1C4251F500480034 /* KVHomeCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVHomeCellItem.m; sourceTree = "<group>"; };
+		A8D718EE1C4252DB00480034 /* KVHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KVHomeCell.h; path = ../model/KVHomeCell.h; sourceTree = "<group>"; };
+		A8D718EF1C4252DB00480034 /* KVHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KVHomeCell.m; path = ../model/KVHomeCell.m; sourceTree = "<group>"; };
+		A8D718F01C4252DB00480034 /* KVHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KVHomeCell.xib; path = ../model/KVHomeCell.xib; sourceTree = "<group>"; };
+		A8D718F51C4274C000480034 /* KVTacticItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KVTacticItem.h; path = ../Controller/KVTacticItem.h; sourceTree = "<group>"; };
+		A8D718F61C4274C000480034 /* KVTacticItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KVTacticItem.m; path = ../Controller/KVTacticItem.m; sourceTree = "<group>"; };
+		A8D718F81C42755800480034 /* KVSubTacticItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KVSubTacticItem.h; path = ../Controller/KVSubTacticItem.h; sourceTree = "<group>"; };
+		A8D718F91C42755800480034 /* KVSubTacticItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KVSubTacticItem.m; path = ../Controller/KVSubTacticItem.m; sourceTree = "<group>"; };
+		A8D718FB1C4277DE00480034 /* KVCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVCollectionViewCell.h; sourceTree = "<group>"; };
+		A8D718FC1C4277DE00480034 /* KVCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVCollectionViewCell.m; sourceTree = "<group>"; };
+		A8D718FE1C4277F700480034 /* KVCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KVCollectionViewCell.xib; sourceTree = "<group>"; };
+		A8D86C311C41F0A600AF0F33 /* KVTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVTitleButton.h; sourceTree = "<group>"; };
+		A8D86C321C41F0A600AF0F33 /* KVTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVTitleButton.m; sourceTree = "<group>"; };
+		A8E141EE1C477C310016FAFB /* KVSelCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVSelCollectionViewCell.h; sourceTree = "<group>"; };
+		A8E141EF1C477C310016FAFB /* KVSelCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVSelCollectionViewCell.m; sourceTree = "<group>"; };
+		A8E141F01C477C310016FAFB /* KVSelCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KVSelCollectionViewCell.xib; sourceTree = "<group>"; };
+		A8E141F31C4780850016FAFB /* KVSubGiftCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVSubGiftCollectionViewCell.h; sourceTree = "<group>"; };
+		A8E141F41C4780850016FAFB /* KVSubGiftCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVSubGiftCollectionViewCell.m; sourceTree = "<group>"; };
+		A8E141F51C4780850016FAFB /* KVSubGiftCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KVSubGiftCollectionViewCell.xib; sourceTree = "<group>"; };
+		A8E141FC1C4788FE0016FAFB /* KVLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVLoginViewController.h; sourceTree = "<group>"; };
+		A8E141FD1C4788FE0016FAFB /* KVLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVLoginViewController.m; sourceTree = "<group>"; };
+		A8E141FE1C4788FE0016FAFB /* KVLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KVLoginViewController.xib; sourceTree = "<group>"; };
+		A8E142011C478D750016FAFB /* KVSelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVSelButton.h; sourceTree = "<group>"; };
+		A8E142021C478D750016FAFB /* KVSelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVSelButton.m; sourceTree = "<group>"; };
+		A8E142041C479D300016FAFB /* KVMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KVMeViewController.xib; sourceTree = "<group>"; };
+		A8E203701C43F47400573174 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		A8F209521C428DAB00A4D222 /* KVTacticCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVTacticCell.h; sourceTree = "<group>"; };
+		A8F209531C428DAB00A4D222 /* KVTacticCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVTacticCell.m; sourceTree = "<group>"; };
+		A8F209541C428DAB00A4D222 /* KVTacticCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KVTacticCell.xib; sourceTree = "<group>"; };
+		A8F209821C4294F000A4D222 /* KVTacticDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVTacticDetailViewController.h; sourceTree = "<group>"; };
+		A8F209831C4294F000A4D222 /* KVTacticDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVTacticDetailViewController.m; sourceTree = "<group>"; };
+		A8F209851C429A7F00A4D222 /* KVTacticDetailItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KVTacticDetailItem.h; path = ../Controller/KVTacticDetailItem.h; sourceTree = "<group>"; };
+		A8F209861C429A7F00A4D222 /* KVTacticDetailItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KVTacticDetailItem.m; path = ../Controller/KVTacticDetailItem.m; sourceTree = "<group>"; };
+		A8F2098D1C429CF700A4D222 /* KVTacticDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVTacticDetailCell.h; sourceTree = "<group>"; };
+		A8F2098E1C429CF700A4D222 /* KVTacticDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVTacticDetailCell.m; sourceTree = "<group>"; };
+		A8F2098F1C429CF700A4D222 /* KVTacticDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KVTacticDetailCell.xib; sourceTree = "<group>"; };
+		E68614FBE8B40E6123AB5818 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FABFEA31AF41D29470381B16 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +262,235 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8E203711C43F47400573174 /* CoreFoundation.framework in Frameworks */,
+				E1346358650942BAB0F37317 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F4CD6D1B7502BD070CB75E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FABFEA31AF41D29470381B16 /* Pods.debug.xcconfig */,
+				0094839F4CD977CDC3650182 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4B4262641A520ACF388EAAFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8E203701C43F47400573174 /* CoreFoundation.framework */,
+				E68614FBE8B40E6123AB5818 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A83C16D61C41FC7A00DFA6B2 /* childVc */ = {
+			isa = PBXGroup;
+			children = (
+				A83C16D71C41FC9200DFA6B2 /* KVEssionViewController.h */,
+				A83C16D81C41FC9200DFA6B2 /* KVEssionViewController.m */,
+				A83C16DA1C41FCAD00DFA6B2 /* KVHaitaoViewController.h */,
+				A83C16DB1C41FCAD00DFA6B2 /* KVHaitaoViewController.m */,
+				A83C16DD1C41FCC500DFA6B2 /* KVLearnViewController.h */,
+				A83C16DE1C41FCC500DFA6B2 /* KVLearnViewController.m */,
+				A83C16E01C41FCD600DFA6B2 /* KVNewlifeViewController.h */,
+				A83C16E11C41FCD600DFA6B2 /* KVNewlifeViewController.m */,
+				A83C16E31C41FD0400DFA6B2 /* KVCommentViewController.h */,
+				A83C16E41C41FD0400DFA6B2 /* KVCommentViewController.m */,
+			);
+			name = childVc;
+			sourceTree = "<group>";
+		};
+		A85441191C47D642006251B7 /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				A854411A1C47D642006251B7 /* controller */,
+				A854411B1C47D642006251B7 /* model */,
+				A854411C1C47D642006251B7 /* view */,
+			);
+			path = setting;
+			sourceTree = "<group>";
+		};
+		A854411A1C47D642006251B7 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				A854411D1C47D664006251B7 /* KVSettingViewController.h */,
+				A854411E1C47D664006251B7 /* KVSettingViewController.m */,
+				A854411F1C47D664006251B7 /* KVSettingViewController.xib */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		A854411B1C47D642006251B7 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		A854411C1C47D642006251B7 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A86338461C414CFE00259A74 /* Classify (分类) */ = {
+			isa = PBXGroup;
+			children = (
+				A86338471C414CFE00259A74 /* Controller */,
+				A863385F1C414CFE00259A74 /* Model */,
+				A86338671C414CFE00259A74 /* View */,
+			);
+			path = "Classify (分类)";
+			sourceTree = "<group>";
+		};
+		A86338471C414CFE00259A74 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A86338481C414CFE00259A74 /* GTClassifyViewController.h */,
+				A86338491C414CFE00259A74 /* GTClassifyViewController.m */,
+				A8D718F41C4272F900480034 /* gift */,
+				A8D718F31C4272CD00480034 /* Tactic */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A863385F1C414CFE00259A74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A863384A1C414CFE00259A74 /* GTFilterItem.h */,
+				A863384B1C414CFE00259A74 /* GTFilterItem.m */,
+				A863384C1C414CFE00259A74 /* GTGiftDetailItem.h */,
+				A863384D1C414CFE00259A74 /* GTGiftDetailItem.m */,
+				A86338501C414CFE00259A74 /* GTHeadDataItem.h */,
+				A86338511C414CFE00259A74 /* GTHeadDataItem.m */,
+				A86338561C414CFE00259A74 /* GTSelGiftItem.h */,
+				A86338571C414CFE00259A74 /* GTSelGiftItem.m */,
+				A8D718F61C4274C000480034 /* KVTacticItem.m */,
+				A8D718F51C4274C000480034 /* KVTacticItem.h */,
+				A8D718F81C42755800480034 /* KVSubTacticItem.h */,
+				A8D718F91C42755800480034 /* KVSubTacticItem.m */,
+				A8F209851C429A7F00A4D222 /* KVTacticDetailItem.h */,
+				A8F209861C429A7F00A4D222 /* KVTacticDetailItem.m */,
+				A86338601C414CFE00259A74 /* Foundation+Log.m */,
+				A86338611C414CFE00259A74 /* GTCategoryItem.h */,
+				A86338621C414CFE00259A74 /* GTCategoryItem.m */,
+				A86338631C414CFE00259A74 /* GTSubCategoryItem.h */,
+				A86338641C414CFE00259A74 /* GTSubCategoryItem.m */,
+				A86338651C414CFE00259A74 /* NSDictionary+PropertyCode.h */,
+				A86338661C414CFE00259A74 /* NSDictionary+PropertyCode.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A86338671C414CFE00259A74 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A863385E1C414CFE00259A74 /* headView.xib */,
+				A86338681C414CFE00259A74 /* GTCategoryView.h */,
+				A86338691C414CFE00259A74 /* GTCategoryView.m */,
+				A863386A1C414CFE00259A74 /* GTLeftCell.h */,
+				A863386B1C414CFE00259A74 /* GTLeftCell.m */,
+				A863386C1C414CFE00259A74 /* GTLeftCell.xib */,
+				A863386D1C414CFE00259A74 /* GTRightCollectionCell.h */,
+				A863386E1C414CFE00259A74 /* GTRightCollectionCell.m */,
+				A863386F1C414CFE00259A74 /* GTRightCollectionCell.xib */,
+				A8E141EE1C477C310016FAFB /* KVSelCollectionViewCell.h */,
+				A8E141EF1C477C310016FAFB /* KVSelCollectionViewCell.m */,
+				A8E141F01C477C310016FAFB /* KVSelCollectionViewCell.xib */,
+				A8E141F31C4780850016FAFB /* KVSubGiftCollectionViewCell.h */,
+				A8E141F41C4780850016FAFB /* KVSubGiftCollectionViewCell.m */,
+				A8E141F51C4780850016FAFB /* KVSubGiftCollectionViewCell.xib */,
+				A8E142011C478D750016FAFB /* KVSelButton.h */,
+				A8E142021C478D750016FAFB /* KVSelButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A868C3361C43CE000013258B /* AD(广告) */ = {
+			isa = PBXGroup;
+			children = (
+				A868C3371C43CE000013258B /* controller */,
+				A868C3381C43CE000013258B /* model */,
+				A868C3391C43CE000013258B /* Tool */,
+				A868C33A1C43CE000013258B /* view */,
+			);
+			path = "AD(广告)";
+			sourceTree = "<group>";
+		};
+		A868C3371C43CE000013258B /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				A868C33B1C43CE2C0013258B /* KVADViewController.h */,
+				A868C33C1C43CE2C0013258B /* KVADViewController.m */,
+				A868C33D1C43CE2C0013258B /* KVADViewController.xib */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		A868C3381C43CE000013258B /* model */ = {
+			isa = PBXGroup;
+			children = (
+				A868C34D1C43D5C00013258B /* KVAdItem.h */,
+				A868C34E1C43D5C00013258B /* KVAdItem.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		A868C3391C43CE000013258B /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		A868C33A1C43CE000013258B /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A868C3401C43D2AC0013258B /* LaunchImage */ = {
+			isa = PBXGroup;
+			children = (
+				A868C3411C43D2AC0013258B /* LaunchImage-700-568h@2x.png */,
+				A868C3421C43D2AC0013258B /* LaunchImage-700-Portrait@2x~ipad.png */,
+				A868C3431C43D2AC0013258B /* LaunchImage-700-Portrait~ipad.png */,
+				A868C3441C43D2AC0013258B /* LaunchImage-700@2x.png */,
+				A868C3451C43D2AC0013258B /* LaunchImage-800-667h@2x.png */,
+				A868C3461C43D2AC0013258B /* LaunchImage-800-Portrait-736h@3x.png */,
+			);
+			path = LaunchImage;
+			sourceTree = "<group>";
+		};
+		A870FD6E1C19259D003C1214 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				A86338851C41564D00259A74 /* NSDictionary+PropertyCode.h */,
+				A86338861C41564D00259A74 /* NSDictionary+PropertyCode.m */,
+				A870FD721C1925C5003C1214 /* UIView+Frame.h */,
+				A870FD731C1925C5003C1214 /* UIView+Frame.m */,
+				A870FD6F1C1925BA003C1214 /* UIImage+Image.h */,
+				A870FD701C1925BA003C1214 /* UIImage+Image.m */,
+				A879D5A41C473EA600956D1D /* UIFont+KVFont.h */,
+				A879D5A51C473EA600956D1D /* UIFont+KVFont.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
 		A8A475C41C186D65007391F8 = {
 			isa = PBXGroup;
 			children = (
 				A8A475CF1C186D65007391F8 /* GiftTalk */,
 				A8A475CE1C186D65007391F8 /* Products */,
+				0F4CD6D1B7502BD070CB75E1 /* Pods */,
+				4B4262641A520ACF388EAAFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +505,8 @@
 		A8A475CF1C186D65007391F8 /* GiftTalk */ = {
 			isa = PBXGroup;
 			children = (
-				A8A475D31C186D65007391F8 /* AppDelegate.h */,
-				A8A475D41C186D65007391F8 /* AppDelegate.m */,
-				A8A475D61C186D65007391F8 /* ViewController.h */,
-				A8A475D71C186D65007391F8 /* ViewController.m */,
-				A8A475D91C186D65007391F8 /* Main.storyboard */,
+				A8A475E71C186DA5007391F8 /* Classes */,
 				A8A475DC1C186D65007391F8 /* Assets.xcassets */,
-				A8A475DE1C186D65007391F8 /* LaunchScreen.storyboard */,
 				A8A475E11C186D65007391F8 /* Info.plist */,
 				A8A475D01C186D65007391F8 /* Supporting Files */,
 			);
@@ -74,9 +516,319 @@
 		A8A475D01C186D65007391F8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A8A475D11C186D65007391F8 /* main.m */,
+				A868C3401C43D2AC0013258B /* LaunchImage */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A8A475E71C186DA5007391F8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A868C3361C43CE000013258B /* AD(广告) */,
+				A86338461C414CFE00259A74 /* Classify (分类) */,
+				A8A475F01C186DA5007391F8 /* Home */,
+				A8A475EC1C186DA5007391F8 /* Gift */,
+				A85441191C47D642006251B7 /* setting */,
+				A8A475F81C186DA5007391F8 /* Me */,
+				A8A475F41C186DA5007391F8 /* Main */,
+				A8E141F81C4788DB0016FAFB /* Login */,
+				A8A475FC1C186DA5007391F8 /* Other */,
+				A8A476011C186DA5007391F8 /* Tool */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A8A475EC1C186DA5007391F8 /* Gift */ = {
+			isa = PBXGroup;
+			children = (
+				A8A475ED1C186DA5007391F8 /* controller */,
+				A8A475EE1C186DA5007391F8 /* model */,
+				A8A475EF1C186DA5007391F8 /* view */,
+			);
+			path = Gift;
+			sourceTree = "<group>";
+		};
+		A8A475ED1C186DA5007391F8 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				A8A476101C187049007391F8 /* KVGiftViewController.h */,
+				A8A476111C187049007391F8 /* KVGiftViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		A8A475EE1C186DA5007391F8 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				A86338881C41570A00259A74 /* KVHotGiftItem.h */,
+				A86338891C41570A00259A74 /* KVHotGiftItem.m */,
+				A863388B1C41571F00259A74 /* KVHotSubGiftItem.h */,
+				A863388C1C41571F00259A74 /* KVHotSubGiftItem.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		A8A475EF1C186DA5007391F8 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A8D718FB1C4277DE00480034 /* KVCollectionViewCell.h */,
+				A8D718FC1C4277DE00480034 /* KVCollectionViewCell.m */,
+				A8D718FE1C4277F700480034 /* KVCollectionViewCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A8A475F01C186DA5007391F8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A8A475F11C186DA5007391F8 /* controller */,
+				A8A475F21C186DA5007391F8 /* model */,
+				A8A475F31C186DA5007391F8 /* view */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A8A475F11C186DA5007391F8 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				A83C16D61C41FC7A00DFA6B2 /* childVc */,
+				A8A4760D1C187023007391F8 /* KVHomeViewController.h */,
+				A8A4760E1C187023007391F8 /* KVHomeViewController.m */,
+				A8A475D91C186D65007391F8 /* Main.storyboard */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		A8A475F21C186DA5007391F8 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				A83C16E61C42075300DFA6B2 /* KVHeaderItem.h */,
+				A83C16E71C42075300DFA6B2 /* KVHeaderItem.m */,
+				A8D718EB1C4251F500480034 /* KVHomeCellItem.h */,
+				A8D718EC1C4251F500480034 /* KVHomeCellItem.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		A8A475F31C186DA5007391F8 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A8D718EE1C4252DB00480034 /* KVHomeCell.h */,
+				A8D718EF1C4252DB00480034 /* KVHomeCell.m */,
+				A8D718F01C4252DB00480034 /* KVHomeCell.xib */,
+				A8D86C311C41F0A600AF0F33 /* KVTitleButton.h */,
+				A8D86C321C41F0A600AF0F33 /* KVTitleButton.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A8A475F41C186DA5007391F8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A8A475F51C186DA5007391F8 /* controller */,
+				A8A475F61C186DA5007391F8 /* model */,
+				A8A475F71C186DA5007391F8 /* view */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A8A475F51C186DA5007391F8 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				A8A476071C186F7B007391F8 /* KVTabBarViewController.h */,
+				A8A476081C186F7B007391F8 /* KVTabBarViewController.m */,
+				A8A476161C1870D8007391F8 /* KVNavigationController.h */,
+				A8A476171C1870D8007391F8 /* KVNavigationController.m */,
+				A888C2AD1C47C98400B1C0E4 /* KVMeNavigationController.h */,
+				A888C2AE1C47C98400B1C0E4 /* KVMeNavigationController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		A8A475F61C186DA5007391F8 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		A8A475F71C186DA5007391F8 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A8A4761C1C18756C007391F8 /* KVTabBar.h */,
+				A8A4761D1C18756C007391F8 /* KVTabBar.m */,
+				A8A4761F1C187AD3007391F8 /* KVButton.h */,
+				A8A476201C187AD3007391F8 /* KVButton.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A8A475F81C186DA5007391F8 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				A8A475F91C186DA5007391F8 /* controller */,
+				A8A475FA1C186DA5007391F8 /* model */,
+				A8A475FB1C186DA5007391F8 /* view */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		A8A475F91C186DA5007391F8 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				A8A4760A1C187012007391F8 /* KVMeViewController.h */,
+				A8A4760B1C187012007391F8 /* KVMeViewController.m */,
+				A8E142041C479D300016FAFB /* KVMeViewController.xib */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		A8A475FA1C186DA5007391F8 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		A8A475FB1C186DA5007391F8 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A8A475FC1C186DA5007391F8 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				A8D718E61C423D1D00480034 /* KVHtmlViewController.h */,
+				A8D718E71C423D1D00480034 /* KVHtmlViewController.m */,
+				A8D718E81C423D1D00480034 /* KVHtmlViewController.xib */,
+				A8A475FF1C186DA5007391F8 /* lib */,
+				A870FD6E1C19259D003C1214 /* category */,
+				A8A475FD1C186DA5007391F8 /* AppDelegate.h */,
+				A8A475FE1C186DA5007391F8 /* AppDelegate.m */,
+				A8A476001C186DA5007391F8 /* main.m */,
+				A86338451C414BA500259A74 /* GiftTalk.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		A8A475FF1C186DA5007391F8 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		A8A476011C186DA5007391F8 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				A8A476021C186DA5007391F8 /* controller */,
+				A8A476031C186DA5007391F8 /* model */,
+				A8A476041C186DA5007391F8 /* view */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		A8A476021C186DA5007391F8 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		A8A476031C186DA5007391F8 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		A8A476041C186DA5007391F8 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A8D718F31C4272CD00480034 /* Tactic */ = {
+			isa = PBXGroup;
+			children = (
+				A863385C1C414CFE00259A74 /* GTTacticViewController.h */,
+				A863385D1C414CFE00259A74 /* GTTacticViewController.m */,
+				A8F209521C428DAB00A4D222 /* KVTacticCell.h */,
+				A8F209531C428DAB00A4D222 /* KVTacticCell.m */,
+				A8F209541C428DAB00A4D222 /* KVTacticCell.xib */,
+				A8F209821C4294F000A4D222 /* KVTacticDetailViewController.h */,
+				A8F209831C4294F000A4D222 /* KVTacticDetailViewController.m */,
+				A8F2098D1C429CF700A4D222 /* KVTacticDetailCell.h */,
+				A8F2098E1C429CF700A4D222 /* KVTacticDetailCell.m */,
+				A8F2098F1C429CF700A4D222 /* KVTacticDetailCell.xib */,
+			);
+			name = Tactic;
+			sourceTree = "<group>";
+		};
+		A8D718F41C4272F900480034 /* gift */ = {
+			isa = PBXGroup;
+			children = (
+				A863384E1C414CFE00259A74 /* GTGiftLeftTVC.h */,
+				A863384F1C414CFE00259A74 /* GTGiftLeftTVC.m */,
+				A86338521C414CFE00259A74 /* GTRightCVC.h */,
+				A86338531C414CFE00259A74 /* GTRightCVC.m */,
+				A86338541C414CFE00259A74 /* GTSelectGiftVC.h */,
+				A86338551C414CFE00259A74 /* GTSelectGiftVC.m */,
+				A86338581C414CFE00259A74 /* GTSubCategoryViewController.h */,
+				A86338591C414CFE00259A74 /* GTSubCategoryViewController.m */,
+				A863385A1C414CFE00259A74 /* GTSubGiftCollectionViewController.h */,
+				A863385B1C414CFE00259A74 /* GTSubGiftCollectionViewController.m */,
+			);
+			name = gift;
+			sourceTree = "<group>";
+		};
+		A8E141F81C4788DB0016FAFB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A8E141F91C4788DB0016FAFB /* controller */,
+				A8E141FA1C4788DB0016FAFB /* model */,
+				A8E141FB1C4788DB0016FAFB /* view */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A8E141F91C4788DB0016FAFB /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				A8E141FC1C4788FE0016FAFB /* KVLoginViewController.h */,
+				A8E141FD1C4788FE0016FAFB /* KVLoginViewController.m */,
+				A8E141FE1C4788FE0016FAFB /* KVLoginViewController.xib */,
+				A83246E91C47FD3D00E75CD1 /* KVRegisterViewController.h */,
+				A83246EA1C47FD3D00E75CD1 /* KVRegisterViewController.m */,
+				A83246EB1C47FD3D00E75CD1 /* KVRegisterViewController.xib */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		A8E141FA1C4788DB0016FAFB /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		A8E141FB1C4788DB0016FAFB /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A85441221C47E215006251B7 /* KVLoginView.h */,
+				A85441231C47E215006251B7 /* KVLoginView.m */,
+				A85441251C47E223006251B7 /* KVLoginView.xib */,
+				A85441271C47E5B5006251B7 /* KVOtherLoginView.h */,
+				A85441281C47E5B5006251B7 /* KVOtherLoginView.m */,
+				A854412A1C47E5CC006251B7 /* KVOtherLoginView.xib */,
+				A83246EE1C47FD8000E75CD1 /* KVRgisterView.h */,
+				A83246EF1C47FD8000E75CD1 /* KVRgisterView.m */,
+				A83246F11C47FD9100E75CD1 /* KVRgisterView.xib */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +838,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8A475E41C186D65007391F8 /* Build configuration list for PBXNativeTarget "GiftTalk" */;
 			buildPhases = (
+				0864A3C3A6FDB87FDCD8A142 /* Check Pods Manifest.lock */,
 				A8A475C91C186D65007391F8 /* Sources */,
 				A8A475CA1C186D65007391F8 /* Frameworks */,
 				A8A475CB1C186D65007391F8 /* Resources */,
+				1AEA2ABB0AE3CA17535805F6 /* Embed Pods Frameworks */,
+				DAAF4528F25818846841AB1F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -105,11 +860,13 @@
 		A8A475C51C186D65007391F8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = KV;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = kv;
 				TargetAttributes = {
 					A8A475CC1C186D65007391F8 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = HS58VJDYA7;
 					};
 				};
 			};
@@ -136,22 +893,152 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8A475E01C186D65007391F8 /* LaunchScreen.storyboard in Resources */,
+				A8D718F21C4252DB00480034 /* KVHomeCell.xib in Resources */,
+				A8E142051C479D300016FAFB /* KVMeViewController.xib in Resources */,
+				A868C3481C43D2AC0013258B /* LaunchImage-700-Portrait@2x~ipad.png in Resources */,
+				A86338841C414CFF00259A74 /* GTRightCollectionCell.xib in Resources */,
+				A8E142001C4788FE0016FAFB /* KVLoginViewController.xib in Resources */,
+				A868C34B1C43D2AC0013258B /* LaunchImage-800-667h@2x.png in Resources */,
+				A83246F21C47FD9100E75CD1 /* KVRgisterView.xib in Resources */,
+				A868C3471C43D2AC0013258B /* LaunchImage-700-568h@2x.png in Resources */,
 				A8A475DD1C186D65007391F8 /* Assets.xcassets in Resources */,
+				A868C33F1C43CE2C0013258B /* KVADViewController.xib in Resources */,
+				A868C34C1C43D2AC0013258B /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
+				A85441211C47D664006251B7 /* KVSettingViewController.xib in Resources */,
+				A8E141F21C477C310016FAFB /* KVSelCollectionViewCell.xib in Resources */,
+				A854412B1C47E5CC006251B7 /* KVOtherLoginView.xib in Resources */,
+				A8F209561C428DAB00A4D222 /* KVTacticCell.xib in Resources */,
+				A86338821C414CFF00259A74 /* GTLeftCell.xib in Resources */,
+				A8E141F71C4780850016FAFB /* KVSubGiftCollectionViewCell.xib in Resources */,
+				A868C3491C43D2AC0013258B /* LaunchImage-700-Portrait~ipad.png in Resources */,
+				A8F209911C429CF700A4D222 /* KVTacticDetailCell.xib in Resources */,
+				A8D718FF1C4277F700480034 /* KVCollectionViewCell.xib in Resources */,
+				A85441261C47E223006251B7 /* KVLoginView.xib in Resources */,
+				A83246ED1C47FD3D00E75CD1 /* KVRegisterViewController.xib in Resources */,
+				A8D718EA1C423D1D00480034 /* KVHtmlViewController.xib in Resources */,
+				A868C34A1C43D2AC0013258B /* LaunchImage-700@2x.png in Resources */,
+				A863387B1C414CFE00259A74 /* headView.xib in Resources */,
 				A8A475DB1C186D65007391F8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0864A3C3A6FDB87FDCD8A142 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1AEA2ABB0AE3CA17535805F6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAAF4528F25818846841AB1F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A8A475C91C186D65007391F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8A475D81C186D65007391F8 /* ViewController.m in Sources */,
-				A8A475D51C186D65007391F8 /* AppDelegate.m in Sources */,
-				A8A475D21C186D65007391F8 /* main.m in Sources */,
+				A86338721C414CFE00259A74 /* GTGiftDetailItem.m in Sources */,
+				A8E141F11C477C310016FAFB /* KVSelCollectionViewCell.m in Sources */,
+				A8D718F11C4252DB00480034 /* KVHomeCell.m in Sources */,
+				A870FD741C1925C5003C1214 /* UIView+Frame.m in Sources */,
+				A86338711C414CFE00259A74 /* GTFilterItem.m in Sources */,
+				A8F209841C4294F000A4D222 /* KVTacticDetailViewController.m in Sources */,
+				A8A476181C1870D8007391F8 /* KVNavigationController.m in Sources */,
+				A8D718FA1C42755800480034 /* KVSubTacticItem.m in Sources */,
+				A85441291C47E5B5006251B7 /* KVOtherLoginView.m in Sources */,
+				A8D718ED1C4251F500480034 /* KVHomeCellItem.m in Sources */,
+				A83C16D91C41FC9200DFA6B2 /* KVEssionViewController.m in Sources */,
+				A86338781C414CFE00259A74 /* GTSubCategoryViewController.m in Sources */,
+				A8A476061C186DA5007391F8 /* main.m in Sources */,
+				A85441201C47D664006251B7 /* KVSettingViewController.m in Sources */,
+				A8A4760C1C187012007391F8 /* KVMeViewController.m in Sources */,
+				A86338801C414CFE00259A74 /* GTCategoryView.m in Sources */,
+				A8A4761E1C18756C007391F8 /* KVTabBar.m in Sources */,
+				A83C16E81C42075300DFA6B2 /* KVHeaderItem.m in Sources */,
+				A8F209551C428DAB00A4D222 /* KVTacticCell.m in Sources */,
+				A83C16E51C41FD0400DFA6B2 /* KVCommentViewController.m in Sources */,
+				A86338731C414CFE00259A74 /* GTGiftLeftTVC.m in Sources */,
+				A83C16DF1C41FCC500DFA6B2 /* KVLearnViewController.m in Sources */,
+				A86338701C414CFE00259A74 /* GTClassifyViewController.m in Sources */,
+				A870FD711C1925BA003C1214 /* UIImage+Image.m in Sources */,
+				A863387A1C414CFE00259A74 /* GTTacticViewController.m in Sources */,
+				A8E141FF1C4788FE0016FAFB /* KVLoginViewController.m in Sources */,
+				A86338771C414CFE00259A74 /* GTSelGiftItem.m in Sources */,
+				A8E142031C478D750016FAFB /* KVSelButton.m in Sources */,
+				A83246F01C47FD8000E75CD1 /* KVRgisterView.m in Sources */,
+				A8E141F61C4780850016FAFB /* KVSubGiftCollectionViewCell.m in Sources */,
+				A8D718FD1C4277DE00480034 /* KVCollectionViewCell.m in Sources */,
+				A8A476091C186F7B007391F8 /* KVTabBarViewController.m in Sources */,
+				A8D718F71C4274C000480034 /* KVTacticItem.m in Sources */,
+				A888C2AF1C47C98400B1C0E4 /* KVMeNavigationController.m in Sources */,
+				A863388A1C41570A00259A74 /* KVHotGiftItem.m in Sources */,
+				A86338741C414CFE00259A74 /* GTHeadDataItem.m in Sources */,
+				A8D86C331C41F0A600AF0F33 /* KVTitleButton.m in Sources */,
+				A8A476121C187049007391F8 /* KVGiftViewController.m in Sources */,
+				A86338831C414CFF00259A74 /* GTRightCollectionCell.m in Sources */,
+				A8F209871C429A7F00A4D222 /* KVTacticDetailItem.m in Sources */,
+				A83C16DC1C41FCAD00DFA6B2 /* KVHaitaoViewController.m in Sources */,
+				A863387F1C414CFE00259A74 /* NSDictionary+PropertyCode.m in Sources */,
+				A8A4760F1C187023007391F8 /* KVHomeViewController.m in Sources */,
+				A8D718E91C423D1D00480034 /* KVHtmlViewController.m in Sources */,
+				A868C33E1C43CE2C0013258B /* KVADViewController.m in Sources */,
+				A8A476051C186DA5007391F8 /* AppDelegate.m in Sources */,
+				A863388D1C41571F00259A74 /* KVHotSubGiftItem.m in Sources */,
+				A863387D1C414CFE00259A74 /* GTCategoryItem.m in Sources */,
+				A8A476211C187AD3007391F8 /* KVButton.m in Sources */,
+				A85441241C47E215006251B7 /* KVLoginView.m in Sources */,
+				A86338871C41564D00259A74 /* NSDictionary+PropertyCode.m in Sources */,
+				A83246EC1C47FD3D00E75CD1 /* KVRegisterViewController.m in Sources */,
+				A863387E1C414CFE00259A74 /* GTSubCategoryItem.m in Sources */,
+				A86338751C414CFE00259A74 /* GTRightCVC.m in Sources */,
+				A86338811C414CFF00259A74 /* GTLeftCell.m in Sources */,
+				A8F209901C429CF700A4D222 /* KVTacticDetailCell.m in Sources */,
+				A86338791C414CFE00259A74 /* GTSubGiftCollectionViewController.m in Sources */,
+				A86338761C414CFE00259A74 /* GTSelectGiftVC.m in Sources */,
+				A83C16E21C41FCD600DFA6B2 /* KVNewlifeViewController.m in Sources */,
+				A868C34F1C43D5C00013258B /* KVAdItem.m in Sources */,
+				A879D5A61C473EA600956D1D /* UIFont+KVFont.m in Sources */,
+				A863387C1C414CFE00259A74 /* Foundation+Log.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,14 +1051,7 @@
 				A8A475DA1C186D65007391F8 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A8A475DE1C186D65007391F8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A8A475DF1C186D65007391F8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
+			path = ../../..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -213,7 +1093,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -251,7 +1131,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -261,23 +1141,39 @@
 		};
 		A8A475E51C186D65007391F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FABFEA31AF41D29470381B16 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/GiftTalk/Classes/Other/category/GiftTalk.pch";
 				INFOPLIST_FILE = GiftTalk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cckv.GiftTalk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cckv.GiftTalk1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		A8A475E61C186D65007391F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0094839F4CD977CDC3650182 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/GiftTalk/Classes/Other/category/GiftTalk.pch";
 				INFOPLIST_FILE = GiftTalk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cckv.GiftTalk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cckv.GiftTalk1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -300,6 +1196,7 @@
 				A8A475E61C186D65007391F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
