@@ -20,7 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
     // 设置属性
     [self initView];
     
@@ -51,7 +52,7 @@
         _cellDataArr = [KVHomeCellItem mj_objectArrayWithKeyValuesArray:items];
         
         [self.tableView reloadData];
-        
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         [SVProgressHUD dismiss];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         

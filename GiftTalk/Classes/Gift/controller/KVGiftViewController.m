@@ -108,33 +108,6 @@ static NSString * const ID = @"collectionView";
     KVHotSubGiftItem *subItem = item.data;
     cell.subItem = subItem;
 
-//    // 添加头标
-//    UIImageView *iconView = [[UIImageView alloc]init];
-//    [cell addSubview:iconView];
-//    iconView.frame = CGRectMake(0, 0, cell.width, cell.width);
-//    // 添加 name
-//    UILabel *nameLab = [[UILabel alloc]init];
-//    [cell addSubview:nameLab];
-//    nameLab.frame = CGRectMake(0, cell.width, cell.width, 30);
-//    // 添加价格
-//    UILabel *priceLab = [[UILabel alloc]init];
-//    [cell addSubview:priceLab];
-//    priceLab.frame = CGRectMake(10, cell.width + 30, 80, 20);
-//    // 添加心数
-//    UILabel *likeLab = [[UILabel alloc]init];
-//    [cell addSubview:likeLab];
-//    likeLab.frame = CGRectMake(80, cell.width + 30, 80, 20);
-//    
-//    // 取出数据
-//    KVHotGiftItem *item = self.giftDataArr[indexPath.row];
-//    KVHotSubGiftItem *subItem = item.data;
-//    // 设置数据
-//    [iconView sd_setImageWithURL:[NSURL URLWithString:subItem.cover_image_url]];
-//    nameLab.text = subItem.name;
-//    priceLab.text = subItem.price;
-//    likeLab.text = [NSString stringWithFormat:@"❤️:%ld",(long)subItem.favorites_count];
-//    cell.backgroundColor = [UIColor whiteColor];
-    
     return cell;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section

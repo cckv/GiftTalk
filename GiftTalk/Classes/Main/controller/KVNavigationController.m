@@ -9,7 +9,7 @@
 #import "KVNavigationController.h"
 #import "UIImage+Image.h"
 
-@interface KVNavigationController ()
+@interface KVNavigationController ()<UIGestureRecognizerDelegate>
 
 @end
 
@@ -17,6 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    [UINavigationBar appearance];
+    // 设置导航栏的图片
+    [self setUp];
+    
+    // 设置侧滑返回手势
+    self.interactivePopGestureRecognizer.delegate = self;
+}
+- (void)setUp
+{
     // 设置导航栏的图片
     UINavigationBar *navigationBar = [UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[[self class]]];
     [navigationBar setBackgroundColor:[UIColor redColor]];
@@ -51,6 +59,11 @@
 - (void)back
 {
     [self popViewControllerAnimated:YES];
+}
+// 侧滑手势
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    return self.childViewControllers.count > 1;
 }
 //- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 //{

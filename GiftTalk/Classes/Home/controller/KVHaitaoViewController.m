@@ -19,11 +19,11 @@
 @implementation KVHaitaoViewController
 
 - (void)viewDidLoad {
+    [SVProgressHUD showWithStatus:@"正在加载数据..."];
     [super viewDidLoad];
-    
     // 设置属性
     [self initView];
-    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     // 数据的加载
     [self getData];
 
@@ -51,7 +51,8 @@
         _cellDataArr = [KVHomeCellItem mj_objectArrayWithKeyValuesArray:items];
 
         [self.tableView reloadData];
-        
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+
         [SVProgressHUD dismiss];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

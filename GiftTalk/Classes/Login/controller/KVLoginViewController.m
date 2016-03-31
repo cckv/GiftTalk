@@ -51,16 +51,7 @@
     
     _otherView1.frame = CGRectMake(0, 0, GTScreenWidth, self.otherLoginView.height * 0.7);
 }
-//- (void)layoutSublayersOfLayer:(CALayer *)layer
-//{
-//    [super layoutSublayersOfLayer:layer];
-//    
-//    // 布局子控件 frame
-//    _loginView1.frame = CGRectMake(0, 0, GTScreenWidth, self.loginView.height);
-//    
-//    _otherView1.frame = CGRectMake(0, 0, GTScreenWidth, GTScreenHeight * 0.7);
-//
-//}
+
 - (void)setNavigationBar
 {
     UIButton *leftBar = [UIButton buttonWithType:UIButtonTypeCustom];

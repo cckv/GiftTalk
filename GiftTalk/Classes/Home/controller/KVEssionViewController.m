@@ -21,6 +21,7 @@
 @property (nonatomic,weak) UIScrollView *scrollView1;
 @property (nonatomic,weak) UIScrollView *scrollView2;
 
+@property (nonatomic,assign) BOOL didLoadData;
 
 // 轮播器图片的个数
 @property (nonatomic,assign) NSInteger count;
@@ -30,9 +31,11 @@
 @implementation KVEssionViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
     
     [self initView];
-
+    [SVProgressHUD showWithStatus:@"正在加载数据..."];
     // 获取网络数据
     [self getData1];
     
@@ -48,8 +51,20 @@
     // 每一个 cell 的数据
     [self getData2];
     
+    
     // 设置头部的图片轮播器
 //    [self setHeaderView];
+}
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if (!self.didLoadData) {
+        [SVProgressHUD showWithStatus:@"正在加载数据..."];
+    }
+}
+- (void)viewDidAppear:(BOOL)animated
+{
+    [SVProgressHUD dismiss];
 }
 - (void)setHeaderView
 {
@@ -113,7 +128,7 @@
         NSDictionary *data = responseObject[@"data"];
         
         NSArray *banners = data[@"banners"];
-        
+
         _headerDataArr = [KVHeaderItem mj_objectArrayWithKeyValuesArray:banners];
         
         _count = _headerDataArr.count;
@@ -123,12 +138,14 @@
             // 设置头部的图片轮播器
             [self setHeaderView];
             
-//            NSInvocationOperation
+            // NSInvocationOperation
+            // 这个类用于调用其他类的方法
+            
             
             [self setImage];
             
         });
-        
+        self.didLoadData = YES;
         
         [SVProgressHUD dismiss];
         
@@ -159,7 +176,8 @@
         _cellDataArr = [KVHomeCellItem mj_objectArrayWithKeyValuesArray:items];
         
         [self.tableView reloadData];
-        
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+
         [SVProgressHUD dismiss];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -235,17 +253,9 @@
     NSLog(@"%s",__func__);
 }
 
-//- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-//{
-//    [[NSNotificationCenter defaultCenter]postNotificationName:@"timo" object:nil];
-//    
-//}
-//- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView
-//{
-//    [[NSNotificationCenter defaultCenter]postNotificationName:@"timo" object:nil];
-//}
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [[NSNotificationCenter defaultCenter]postNotificationName:@"timo" object:nil];
+//    [NSNotificationCenter defaultCenter]addObserver:<#(nonnull id)#> selector:<#(nonnull SEL)#> name:<#(nullable NSString *)#> object:<#(nullable id)#>
 }
 @end

@@ -11,7 +11,10 @@
 @implementation KVAnimationView
 
 -(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    
+    if (self.x < 0) {
+        self.x = 0;
+        return;
+    }
     UITouch *touch = [touches anyObject];
     //1.获取当前手指所在点。
     CGPoint curP = [touch locationInView:self];

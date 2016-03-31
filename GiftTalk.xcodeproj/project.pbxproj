@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A82906501C8712B10010BC50 /* KVCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A829064F1C8712B10010BC50 /* KVCollectionReusableView.m */; };
 		A83246EC1C47FD3D00E75CD1 /* KVRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A83246EA1C47FD3D00E75CD1 /* KVRegisterViewController.m */; };
 		A83246ED1C47FD3D00E75CD1 /* KVRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A83246EB1C47FD3D00E75CD1 /* KVRegisterViewController.xib */; };
 		A83246F01C47FD8000E75CD1 /* KVRgisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = A83246EF1C47FD8000E75CD1 /* KVRgisterView.m */; };
@@ -102,6 +103,8 @@
 
 /* Begin PBXFileReference section */
 		0094839F4CD977CDC3650182 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A829064E1C8712B10010BC50 /* KVCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVCollectionReusableView.h; sourceTree = "<group>"; };
+		A829064F1C8712B10010BC50 /* KVCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVCollectionReusableView.m; sourceTree = "<group>"; };
 		A83246E91C47FD3D00E75CD1 /* KVRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVRegisterViewController.h; sourceTree = "<group>"; };
 		A83246EA1C47FD3D00E75CD1 /* KVRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVRegisterViewController.m; sourceTree = "<group>"; };
 		A83246EB1C47FD3D00E75CD1 /* KVRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KVRegisterViewController.xib; sourceTree = "<group>"; };
@@ -411,6 +414,8 @@
 				A8E141F51C4780850016FAFB /* KVSubGiftCollectionViewCell.xib */,
 				A8E142011C478D750016FAFB /* KVSelButton.h */,
 				A8E142021C478D750016FAFB /* KVSelButton.m */,
+				A829064E1C8712B10010BC50 /* KVCollectionReusableView.h */,
+				A829064F1C8712B10010BC50 /* KVCollectionReusableView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1030,6 +1035,7 @@
 				A868C33E1C43CE2C0013258B /* KVADViewController.m in Sources */,
 				A8A476051C186DA5007391F8 /* AppDelegate.m in Sources */,
 				A863388D1C41571F00259A74 /* KVHotSubGiftItem.m in Sources */,
+				A82906501C8712B10010BC50 /* KVCollectionReusableView.m in Sources */,
 				A863387D1C414CFE00259A74 /* GTCategoryItem.m in Sources */,
 				A8A476211C187AD3007391F8 /* KVButton.m in Sources */,
 				A85441241C47E215006251B7 /* KVLoginView.m in Sources */,
@@ -1157,7 +1163,7 @@
 				INFOPLIST_FILE = GiftTalk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cckv.GiftTalk1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cckv.GiftTalk29;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1176,7 +1182,7 @@
 				INFOPLIST_FILE = GiftTalk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cckv.GiftTalk1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cckv.GiftTalk29;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

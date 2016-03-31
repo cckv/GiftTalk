@@ -26,7 +26,7 @@ static int const titleViewH = 30;
 @property (nonatomic,weak) UIScrollView *scrollView;
 @property (nonatomic,weak) KVTitleButton *selTitleButton;
 @property (nonatomic,weak) UIView *bottomLine;
-
+// 提莫按钮
 @property (nonatomic,weak) KVAnimationView *animationView;
 @end
 
@@ -50,6 +50,7 @@ static int const titleViewH = 30;
     
     // 添加小动画
     [self addAnimationView];
+    
     
     // 监听通知
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(timo) name:@"timo" object:nil];

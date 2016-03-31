@@ -8,22 +8,25 @@
 
 #import "KVMeNavigationController.h"
 
-@interface KVMeNavigationController ()
-
+@interface KVMeNavigationController ()<UIGestureRecognizerDelegate>
+@property(weak,nonatomic)UIImageView *navigatarView;
 @end
 
 @implementation KVMeNavigationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
+    // 设置侧滑返回手势
+    self.interactivePopGestureRecognizer.delegate = self;
+    // 清除导航栏的背景图片
     [self.navigationBar setBackgroundImage:[[UIImage alloc]init] forBarMetrics:UIBarMetricsDefault];
     [self.navigationBar setShadowImage:[[UIImage alloc]init]];
-    
-    
+
     
     UINavigationBar *navigationBar = [UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[[self class]]];
 
+    
     // 设置导航栏文字的大小和颜色
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     dict[NSForegroundColorAttributeName] = [UIColor whiteColor];
@@ -32,6 +35,7 @@
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"navigationButtonReturn"] style:UIBarButtonItemStylePlain target:self action:@selector(back)];
 }
+//
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     if (self.childViewControllers.count) {
@@ -48,21 +52,22 @@
         [backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
         backButton.contentEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+
     }
     [super pushViewController:viewController animated:animated];
 }
+
 - (void)back
 {
     [self popViewControllerAnimated:YES];
+//    self.navigatarView.hidden = YES;
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+// 侧滑手势
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+//    self.navigatarView.hidden = YES;
+    return self.childViewControllers.count > 1;
 }
-*/
 
 @end

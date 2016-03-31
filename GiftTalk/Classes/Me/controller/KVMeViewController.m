@@ -37,6 +37,14 @@ static NSString *const ID = @"cell";
 
 @implementation KVMeViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    [self setNavigationBar];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -84,8 +92,18 @@ static NSString *const ID = @"cell";
     redLine.height = 1;
 }
 
+- (void)viewDidappear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
 - (void)setNavigationBar
 {
+
+    // 设置导航栏为透明
+//    self.navigationController.navigationBar.alpha = 0;
+//    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc]init] forBarMetrics:UIBarMetricsDefault];
+//    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc]init]];
+    
     // 设置导航栏左边的设置按钮
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     // 设置图片
@@ -137,26 +155,40 @@ static NSString *const ID = @"cell";
 {
     KVSettingViewController *setVc = [[KVSettingViewController alloc]init];
     setVc.title = @"设置";
+    [setVc.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:KVColor(243, 53, 62)] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController pushViewController:setVc animated:YES];
 }
 
 // 购物车按钮
 - (IBAction)gouwuche:(id)sender {
     NSLog(@"%s",__func__);
+    KVLoginViewController *loginVc = [[KVLoginViewController alloc]init];
+    loginVc.title = @"登录";
+    KVNavigationController *nav = [[KVNavigationController alloc]initWithRootViewController:loginVc];
+    [self presentViewController:nav animated:YES completion:nil];
     
 }
 // 订单
 - (IBAction)dingdan:(id)sender {
     NSLog(@"%s",__func__);
+    KVLoginViewController *loginVc = [[KVLoginViewController alloc]init];
+    loginVc.title = @"登录";
+    KVNavigationController *nav = [[KVNavigationController alloc]initWithRootViewController:loginVc];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 // 礼券
 - (IBAction)liquan:(id)sender {
     NSLog(@"%s",__func__);
+    KVLoginViewController *loginVc = [[KVLoginViewController alloc]init];
+    loginVc.title = @"登录";
+    KVNavigationController *nav = [[KVNavigationController alloc]initWithRootViewController:loginVc];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 // 客服
 - (IBAction)kefu:(id)sender {
     NSLog(@"%s",__func__);
+    
 }
 
 // 选择喜欢的礼物
