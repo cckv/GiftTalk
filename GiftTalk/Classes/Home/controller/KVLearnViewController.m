@@ -13,7 +13,8 @@
 
 
 @interface KVLearnViewController ()
-@property (nonatomic,strong) NSArray *cellDataArr;
+@property (nonatomic,strong) NSMutableArray *cellDataArr;
+@property(nonatomic,assign)int offset;
 @end
 
 @implementation KVLearnViewController
@@ -28,8 +29,64 @@
     // 数据的加载
     [self getData];
     
+    self.offset = 0;
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+        [self getData];
+        
+    }];
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        
+        self.offset += 20;
+        [self getData:self.offset];
+        
+    }];
+    
 }
-
+// 上啦刷新
+- (void)getData:(int)offset
+{
+    
+    [SVProgressHUD showWithStatus:@"正在加载数据..."];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    
+    //    NSString *urlStr = @"http://api.liwushuo.com/v2/channels/106/items?ad=1&gender=1&generation=0&limit=20&offset=0";
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://api.liwushuo.com/v2/channels/111/items?ad=1&gender=1&generation=0&limit=20&offset=%d",offset];
+    
+    [manager GET:urlStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
+        
+        
+        NSDictionary *data = responseObject[@"data"];
+        
+        NSArray *items = data[@"items"];
+        
+        NSArray *arr = [KVHomeCellItem mj_objectArrayWithKeyValuesArray:items];
+        
+        for (KVHomeCellItem *item in arr) {
+            [self.cellDataArr addObject:item];
+        }
+        
+        [self.tableView reloadData];
+        
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        
+        [SVProgressHUD dismiss];
+        
+        [self.tableView.mj_footer endRefreshing];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+    
+}
 - (void)getData
 {
     
@@ -54,6 +111,7 @@
         [self.tableView reloadData];
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         [SVProgressHUD dismiss];
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];

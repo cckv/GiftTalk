@@ -15,7 +15,8 @@
 @interface KVGiftViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 
 @property (nonatomic,weak) UICollectionView *collectionView;
-@property (nonatomic,strong) NSArray *giftDataArr;
+@property (nonatomic,strong) NSMutableArray *giftDataArr;
+@property(nonatomic,assign)int offset;
 @end
 static NSString * const ID = @"collectionView";
 @implementation KVGiftViewController
@@ -39,6 +40,59 @@ static NSString * const ID = @"collectionView";
     self.automaticallyAdjustsScrollViewInsets = NO;
     
 //    [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([KVCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:ID];
+    self.offset = 0;
+    
+    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+        [self getData];
+        
+    }];
+    self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        
+        self.offset += 50;
+        [self getData:self.offset];
+        
+    }];
+    
+}
+// 上啦刷新
+- (void)getData:(int)offset
+{
+    
+    [SVProgressHUD showWithStatus:@"正在加载数据..."];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"gender"] = @"1";
+    parameters[@"generation"] = @"0";
+    parameters[@"limit"] = @"50";
+    parameters[@"offset"] = @(offset);
+    
+    [manager GET:@"http://api.liwushuo.com/v2/items" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary*  _Nullable responseObject) {
+        
+        NSDictionary *dict = responseObject[@"data"];
+        NSArray *data = dict[@"items"];
+        
+        NSArray *arr = [KVHotGiftItem mj_objectArrayWithKeyValuesArray:data];
+        
+        for (KVHotGiftItem *item in arr) {
+            [self.giftDataArr addObject:item];
+        }
+        
+        [self.collectionView reloadData];
+        
+        [SVProgressHUD dismiss];
+        
+        [self.collectionView.mj_footer endRefreshing];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+    
 }
 
 - (void)getData
@@ -67,6 +121,8 @@ static NSString * const ID = @"collectionView";
         [self.collectionView reloadData];
         
         [SVProgressHUD dismiss];
+        
+        [self.collectionView.mj_header endRefreshing];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
@@ -134,7 +190,7 @@ static NSString * const ID = @"collectionView";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     // 取出数据模型
-    KVHotGiftItem *item = self.giftDataArr[indexPath.section];
+    KVHotGiftItem *item = self.giftDataArr[indexPath.row];
     KVHotSubGiftItem *subItem = item.data;
     
     // 创建商品详情页

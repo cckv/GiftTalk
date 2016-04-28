@@ -40,6 +40,22 @@
     }
     return _cellDataArr;
 }
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.tableView.mj_footer.hidden = YES;
+    
+    if (!self.didLoadData) {
+        [SVProgressHUD showWithStatus:@"正在加载数据..."];
+    }
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [SVProgressHUD dismiss];
+    self.tableView.mj_footer.hidden = NO;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -76,27 +92,13 @@
     [KVHomeCellItem mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
         return @{@"Template":@"template"};
     }];
-    // 每一个 cell 的数据
-    [self getData:self.offset];
+
     
     
     // 设置头部的图片轮播器
 //    [self setHeaderView];
 }
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    self.tableView.mj_footer.hidden = YES;
-    
-    if (!self.didLoadData) {
-        [SVProgressHUD showWithStatus:@"正在加载数据..."];
-    }
-}
-- (void)viewDidAppear:(BOOL)animated
-{
-    [SVProgressHUD dismiss];
-}
+
 - (void)setHeaderView
 {
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 200)];
@@ -143,6 +145,7 @@
     }
     self.tableView.tableHeaderView = headerView;
 }
+// 加载头部的数据
 - (void)getData1
 {
     [SVProgressHUD showWithStatus:@"正在加载数据..."];
@@ -185,6 +188,7 @@
     }];
 
 }
+// 获取第一次的数据
 - (void)getData
 {
     
@@ -226,6 +230,7 @@
         [SVProgressHUD dismiss];
         
         [self.tableView.mj_header endRefreshing];
+        
         self.tableView.mj_footer.hidden = NO;
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -233,6 +238,7 @@
     }];
     
 }
+// 上啦刷新
 - (void)getData:(int)offset
 {
     
