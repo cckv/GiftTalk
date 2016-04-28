@@ -149,7 +149,7 @@ static int const titleViewH = 30;
     [self.view addSubview:titleView];
     _titleView = titleView;
     titleView.frame = CGRectMake(0, 0, GTScreenWidth, 30);
-    titleView.backgroundColor = [[UIColor whiteColor]colorWithAlphaComponent:0.5];
+    titleView.backgroundColor = [[UIColor whiteColor]colorWithAlphaComponent:1];
     titleView.contentSize = CGSizeMake(titleBtnCount * titleButtonW, 0);
     
     // 添加按钮

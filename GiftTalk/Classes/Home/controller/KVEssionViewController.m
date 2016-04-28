@@ -15,7 +15,7 @@
 @interface KVEssionViewController ()
 // 数据模型
 @property (nonatomic,strong) NSArray *headerDataArr;
-@property (nonatomic,strong) NSArray *cellDataArr;
+@property (nonatomic,strong) NSMutableArray *cellDataArr;
 // view
 @property (nonatomic,weak) UIView *headerView;
 @property (nonatomic,weak) UIScrollView *scrollView1;
@@ -25,14 +25,42 @@
 
 // 轮播器图片的个数
 @property (nonatomic,assign) NSInteger count;
+@property (nonatomic, assign) int offset;
 
 @end
 
 @implementation KVEssionViewController
+
+
+
+-(NSMutableArray *)cellDataAr
+{
+    if (_cellDataArr == nil) {
+        _cellDataArr = [NSMutableArray array];
+    }
+    return _cellDataArr;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.offset = 0;
+    
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    [self getData];
+    
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+       
+        [self getData];
 
+    }];
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+       
+        self.offset += 20;
+        [self getData:self.offset];
+        
+    }];
     
     [self initView];
     [SVProgressHUD showWithStatus:@"正在加载数据..."];
@@ -49,7 +77,7 @@
         return @{@"Template":@"template"};
     }];
     // 每一个 cell 的数据
-    [self getData2];
+    [self getData:self.offset];
     
     
     // 设置头部的图片轮播器
@@ -58,6 +86,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    self.tableView.mj_footer.hidden = YES;
+    
     if (!self.didLoadData) {
         [SVProgressHUD showWithStatus:@"正在加载数据..."];
     }
@@ -154,7 +185,7 @@
     }];
 
 }
-- (void)getData2
+- (void)getData
 {
     
     [SVProgressHUD showWithStatus:@"正在加载数据..."];
@@ -162,7 +193,57 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     
-    NSString *urlStr = @"http://api.liwushuo.com/v2/channels/106/items?ad=1&gender=1&generation=0&limit=20&offset=0";
+    //    NSString *urlStr = @"http://api.liwushuo.com/v2/channels/106/items?ad=1&gender=1&generation=0&limit=20&offset=0";
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://api.liwushuo.com/v2/channels/106/items?ad=1&gender=1&generation=0&limit=20&offset=%d",0];
+    
+    [manager GET:urlStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
+        
+        
+        NSDictionary *data = responseObject[@"data"];
+        
+        NSArray *items = data[@"items"];
+        
+        NSArray *arr = [KVHomeCellItem mj_objectArrayWithKeyValuesArray:items];
+        if (self.cellDataArr.count) {
+            
+            for (KVHomeCellItem *item in arr) {
+                [self.cellDataArr insertObject:item atIndex:0];
+            }
+            
+        }else
+        {
+            self.cellDataArr = [KVHomeCellItem mj_objectArrayWithKeyValuesArray:items];
+        }
+        
+        
+        [self.tableView reloadData];
+        
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        
+        [SVProgressHUD dismiss];
+        
+        [self.tableView.mj_header endRefreshing];
+        self.tableView.mj_footer.hidden = NO;
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+    
+}
+- (void)getData:(int)offset
+{
+    
+    [SVProgressHUD showWithStatus:@"正在加载数据..."];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    
+//    NSString *urlStr = @"http://api.liwushuo.com/v2/channels/106/items?ad=1&gender=1&generation=0&limit=20&offset=0";
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://api.liwushuo.com/v2/channels/106/items?ad=1&gender=1&generation=0&limit=20&offset=%d",offset];
     
     [manager GET:urlStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
@@ -173,12 +254,19 @@
         
         NSArray *items = data[@"items"];
         
-        _cellDataArr = [KVHomeCellItem mj_objectArrayWithKeyValuesArray:items];
+        NSArray *arr = [KVHomeCellItem mj_objectArrayWithKeyValuesArray:items];
         
+        for (KVHomeCellItem *item in arr) {
+            [self.cellDataArr addObject:item];
+        }
+
         [self.tableView reloadData];
+        
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
 
         [SVProgressHUD dismiss];
+        
+        [self.tableView.mj_footer endRefreshing];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
