@@ -24,6 +24,23 @@
     [self setChildVC];
     // 点击 segment 切换控制器
     [self selView];
+    
+    [self setNav];
+}
+- (void)setNav
+{
+    UIButton *left = [[UIButton alloc]init];
+    [left sizeToFit];
+    [left setImage:[UIImage imageNamed:@"search_new"] forState:UIControlStateNormal];
+    [left addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftMsgBtn = [[UIBarButtonItem alloc] initWithCustomView:left];
+    [self.navigationItem setRightBarButtonItem:leftMsgBtn];
+}
+// 搜索按钮的点击
+- (void)search
+{
+    KVSearchTableViewController *searchVC = [[KVSearchTableViewController alloc]init];
+    [self.navigationController pushViewController:searchVC animated:YES];
 }
 - (void)viewDidDisappear:(BOOL)animated
 {

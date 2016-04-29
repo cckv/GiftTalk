@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		469076231CD301C7001FFCEA /* KVSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 469076221CD301C7001FFCEA /* KVSearchTableViewController.m */; };
 		A82906501C8712B10010BC50 /* KVCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A829064F1C8712B10010BC50 /* KVCollectionReusableView.m */; };
 		A83246EC1C47FD3D00E75CD1 /* KVRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A83246EA1C47FD3D00E75CD1 /* KVRegisterViewController.m */; };
 		A83246ED1C47FD3D00E75CD1 /* KVRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A83246EB1C47FD3D00E75CD1 /* KVRegisterViewController.xib */; };
@@ -103,6 +104,8 @@
 
 /* Begin PBXFileReference section */
 		0094839F4CD977CDC3650182 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		469076211CD301C7001FFCEA /* KVSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVSearchTableViewController.h; sourceTree = "<group>"; };
+		469076221CD301C7001FFCEA /* KVSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVSearchTableViewController.m; sourceTree = "<group>"; };
 		A829064E1C8712B10010BC50 /* KVCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVCollectionReusableView.h; sourceTree = "<group>"; };
 		A829064F1C8712B10010BC50 /* KVCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVCollectionReusableView.m; sourceTree = "<group>"; };
 		A83246E91C47FD3D00E75CD1 /* KVRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVRegisterViewController.h; sourceTree = "<group>"; };
@@ -283,6 +286,15 @@
 				0094839F4CD977CDC3650182 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		4690761D1CD2FA2B001FFCEA /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				469076211CD301C7001FFCEA /* KVSearchTableViewController.h */,
+				469076221CD301C7001FFCEA /* KVSearchTableViewController.m */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		4B4262641A520ACF388EAAFC /* Frameworks */ = {
@@ -532,6 +544,7 @@
 		A8A475E71C186DA5007391F8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4690761D1CD2FA2B001FFCEA /* Search */,
 				A868C3361C43CE000013258B /* AD(广告) */,
 				A86338461C414CFE00259A74 /* Classify (分类) */,
 				A8A475F01C186DA5007391F8 /* Home */,
@@ -1021,6 +1034,7 @@
 				A8D718FD1C4277DE00480034 /* KVCollectionViewCell.m in Sources */,
 				A8A476091C186F7B007391F8 /* KVTabBarViewController.m in Sources */,
 				A8D718F71C4274C000480034 /* KVTacticItem.m in Sources */,
+				469076231CD301C7001FFCEA /* KVSearchTableViewController.m in Sources */,
 				A888C2AF1C47C98400B1C0E4 /* KVMeNavigationController.m in Sources */,
 				A863388A1C41570A00259A74 /* KVHotGiftItem.m in Sources */,
 				A86338741C414CFE00259A74 /* GTHeadDataItem.m in Sources */,

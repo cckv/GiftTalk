@@ -54,9 +54,27 @@ static int const titleViewH = 30;
     
     // 监听通知
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(timo) name:@"timo" object:nil];
+    
+    // 设置导航栏
+    [self setNav];
 }
 
 #pragma mark - 初始化方法
+- (void)setNav
+{
+    UIButton *left = [[UIButton alloc]init];
+    [left sizeToFit];
+    [left setImage:[UIImage imageNamed:@"search_new"] forState:UIControlStateNormal];
+    [left addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftMsgBtn = [[UIBarButtonItem alloc] initWithCustomView:left];
+    [self.navigationItem setRightBarButtonItem:leftMsgBtn];
+}
+// 搜索按钮的点击
+- (void)search
+{
+    KVSearchTableViewController *searchVC = [[KVSearchTableViewController alloc]init];
+    [self.navigationController pushViewController:searchVC animated:YES];
+}
 // 添加小人物
 - (void)addAnimationView
 {

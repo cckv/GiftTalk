@@ -17,6 +17,7 @@
 #import "UIImage+Image.h"
 
 
+
 #define GTWeakSelf typeof(self) weakSelf = self
 #define GTKeyWindow [UIApplication sharedApplication].keyWindow
 #define GTScreenWidth [UIScreen mainScreen].bounds.size.width
@@ -39,6 +40,6 @@
 #import "GTCategoryItem.h"
 #import "GTSubCategoryItem.h"
 #pragma make --------------cckv----------------
-
+#import "KVSearchTableViewController.h"
 
 #endif

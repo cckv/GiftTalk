@@ -24,6 +24,8 @@ static NSString * const ID = @"collectionView";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self setNav];
+    
     [KVHotSubGiftItem mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
         return @{@"Description":@"description"};
     }];
@@ -54,6 +56,21 @@ static NSString * const ID = @"collectionView";
         
     }];
     
+}
+- (void)setNav
+{
+    UIButton *left = [[UIButton alloc]init];
+    [left sizeToFit];
+    [left setImage:[UIImage imageNamed:@"search_new"] forState:UIControlStateNormal];
+    [left addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftMsgBtn = [[UIBarButtonItem alloc] initWithCustomView:left];
+    [self.navigationItem setRightBarButtonItem:leftMsgBtn];
+}
+// 搜索按钮的点击
+- (void)search
+{
+    KVSearchTableViewController *searchVC = [[KVSearchTableViewController alloc]init];
+    [self.navigationController pushViewController:searchVC animated:YES];
 }
 // 上啦刷新
 - (void)getData:(int)offset
