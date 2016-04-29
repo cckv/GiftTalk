@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="VJ5-pP-EuY" customClass="KVOtherLoginView">
+            <rect key="frame" x="0.0" y="0.0" width="321" height="161"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uo6-jG-fKU">
+                    <rect key="frame" x="22" y="65" width="63" height="63"/>
+                    <state key="normal" image="icon_log_sina"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Unx-OI-Jxo">
+                    <rect key="frame" x="129" y="65" width="63" height="63"/>
+                    <state key="normal" image="icon_log_wechat"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgv-jk-YXc">
+                    <rect key="frame" x="236" y="65" width="63" height="63"/>
+                    <state key="normal" image="icon_log_qq"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使用社交账号登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRN-qA-clU">
+                    <rect key="frame" x="0.0" y="0.0" width="321" height="32"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="sgv-jk-YXc" firstAttribute="leading" secondItem="Unx-OI-Jxo" secondAttribute="trailing" id="6ST-3c-Ipv"/>
+                <constraint firstItem="Unx-OI-Jxo" firstAttribute="height" secondItem="uo6-jG-fKU" secondAttribute="height" id="7W9-L6-Ctp"/>
+                <constraint firstItem="uo6-jG-fKU" firstAttribute="height" secondItem="VJ5-pP-EuY" secondAttribute="height" multiplier="0.8" id="FVY-BY-z1z"/>
+                <constraint firstItem="sgv-jk-YXc" firstAttribute="width" secondItem="Unx-OI-Jxo" secondAttribute="width" id="FZh-Ye-83b"/>
+                <constraint firstAttribute="bottom" secondItem="sgv-jk-YXc" secondAttribute="bottom" id="GJa-jm-KEX"/>
+                <constraint firstItem="sgv-jk-YXc" firstAttribute="leading" secondItem="Unx-OI-Jxo" secondAttribute="trailing" id="HC3-fO-qyl"/>
+                <constraint firstItem="Unx-OI-Jxo" firstAttribute="width" secondItem="uo6-jG-fKU" secondAttribute="width" id="K0V-Ic-LEX"/>
+                <constraint firstItem="Unx-OI-Jxo" firstAttribute="leading" secondItem="uo6-jG-fKU" secondAttribute="trailing" id="KNS-eP-azw"/>
+                <constraint firstItem="sgv-jk-YXc" firstAttribute="height" secondItem="Unx-OI-Jxo" secondAttribute="height" id="LCb-hC-i6q"/>
+                <constraint firstAttribute="trailing" secondItem="sgv-jk-YXc" secondAttribute="trailing" id="a7B-X2-FPd"/>
+                <constraint firstItem="Unx-OI-Jxo" firstAttribute="leading" secondItem="uo6-jG-fKU" secondAttribute="trailing" id="b7d-ty-rDn"/>
+                <constraint firstItem="uo6-jG-fKU" firstAttribute="leading" secondItem="VJ5-pP-EuY" secondAttribute="leading" id="hIr-rE-cMf"/>
+                <constraint firstItem="KRN-qA-clU" firstAttribute="leading" secondItem="VJ5-pP-EuY" secondAttribute="leading" id="qEC-gE-zds"/>
+                <constraint firstAttribute="bottom" secondItem="uo6-jG-fKU" secondAttribute="bottom" id="rpA-OV-cYs"/>
+                <constraint firstAttribute="trailing" secondItem="KRN-qA-clU" secondAttribute="trailing" id="tYo-Te-i1m"/>
+                <constraint firstItem="Unx-OI-Jxo" firstAttribute="top" secondItem="KRN-qA-clU" secondAttribute="bottom" id="uJn-Ay-T8Q"/>
+                <constraint firstItem="KRN-qA-clU" firstAttribute="top" secondItem="VJ5-pP-EuY" secondAttribute="top" id="usn-T0-voB"/>
+                <constraint firstAttribute="bottom" secondItem="Unx-OI-Jxo" secondAttribute="bottom" id="yoc-92-jc9"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="365.5" y="56.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_log_qq" width="63" height="63"/>
+        <image name="icon_log_sina" width="63" height="63"/>
+        <image name="icon_log_wechat" width="63" height="63"/>
+    </resources>
+</document>
