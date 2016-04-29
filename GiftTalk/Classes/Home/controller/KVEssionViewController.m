@@ -16,7 +16,11 @@
 // 数据模型
 @property (nonatomic,strong) NSArray *headerDataArr;
 <<<<<<< HEAD
+<<<<<<< HEAD
 @property (nonatomic,strong) NSMutableArray *cellDataArr;
+=======
+@property (nonatomic,strong) NSArray *cellDataArr;
+>>>>>>> origin/master
 =======
 @property (nonatomic,strong) NSArray *cellDataArr;
 >>>>>>> origin/master
@@ -30,13 +34,17 @@
 // 轮播器图片的个数
 @property (nonatomic,assign) NSInteger count;
 <<<<<<< HEAD
+<<<<<<< HEAD
 @property (nonatomic, assign) int offset;
+=======
+>>>>>>> origin/master
 =======
 >>>>>>> origin/master
 
 @end
 
 @implementation KVEssionViewController
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -70,10 +78,15 @@
         
     }];
 =======
+=======
+>>>>>>> origin/master
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
     
     [self initView];
@@ -92,7 +105,11 @@
     }];
     // 每一个 cell 的数据
 <<<<<<< HEAD
+<<<<<<< HEAD
     [self getData:self.offset];
+=======
+    [self getData2];
+>>>>>>> origin/master
 =======
     [self getData2];
 >>>>>>> origin/master
@@ -105,9 +122,12 @@
 {
     [super viewWillAppear:animated];
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     self.tableView.mj_footer.hidden = YES;
     
+=======
+>>>>>>> origin/master
 =======
 >>>>>>> origin/master
     if (!self.didLoadData) {
@@ -207,6 +227,7 @@
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 - (void)getData
 {
     
@@ -259,6 +280,9 @@
 =======
 - (void)getData2
 >>>>>>> origin/master
+=======
+- (void)getData2
+>>>>>>> origin/master
 {
     
     [SVProgressHUD showWithStatus:@"正在加载数据..."];
@@ -267,9 +291,13 @@
     
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 //    NSString *urlStr = @"http://api.liwushuo.com/v2/channels/106/items?ad=1&gender=1&generation=0&limit=20&offset=0";
     
     NSString *urlStr = [NSString stringWithFormat:@"http://api.liwushuo.com/v2/channels/106/items?ad=1&gender=1&generation=0&limit=20&offset=%d",offset];
+=======
+    NSString *urlStr = @"http://api.liwushuo.com/v2/channels/106/items?ad=1&gender=1&generation=0&limit=20&offset=0";
+>>>>>>> origin/master
 =======
     NSString *urlStr = @"http://api.liwushuo.com/v2/channels/106/items?ad=1&gender=1&generation=0&limit=20&offset=0";
 >>>>>>> origin/master
@@ -284,6 +312,7 @@
         NSArray *items = data[@"items"];
         
 <<<<<<< HEAD
+<<<<<<< HEAD
         NSArray *arr = [KVHomeCellItem mj_objectArrayWithKeyValuesArray:items];
         
         for (KVHomeCellItem *item in arr) {
@@ -297,13 +326,21 @@
         
         [self.tableView reloadData];
 >>>>>>> origin/master
+=======
+        _cellDataArr = [KVHomeCellItem mj_objectArrayWithKeyValuesArray:items];
+        
+        [self.tableView reloadData];
+>>>>>>> origin/master
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
 
         [SVProgressHUD dismiss];
         
 <<<<<<< HEAD
+<<<<<<< HEAD
         [self.tableView.mj_footer endRefreshing];
         
+=======
+>>>>>>> origin/master
 =======
 >>>>>>> origin/master
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

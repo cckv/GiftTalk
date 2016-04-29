@@ -150,7 +150,11 @@ static int const titleViewH = 30;
     _titleView = titleView;
     titleView.frame = CGRectMake(0, 0, GTScreenWidth, 30);
 <<<<<<< HEAD
+<<<<<<< HEAD
     titleView.backgroundColor = [[UIColor whiteColor]colorWithAlphaComponent:1];
+=======
+    titleView.backgroundColor = [[UIColor whiteColor]colorWithAlphaComponent:0.5];
+>>>>>>> origin/master
 =======
     titleView.backgroundColor = [[UIColor whiteColor]colorWithAlphaComponent:0.5];
 >>>>>>> origin/master
