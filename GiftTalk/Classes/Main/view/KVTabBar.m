@@ -40,27 +40,6 @@
         {
             [self btnClick:btn];
         }
-        /*
-        switch (i) {
-            case 0:
-                [btn setTitle:@"礼物说" forState:UIControlStateNormal];
-                btn.titleLabel.textAlignment = NSTextAlignmentCenter;
-                btn.titleLabel.text = @"礼物说";
-                btn.title = @"礼物说";
-                break;
-            case 1:
-                [btn setTitle:@"礼物说" forState:UIControlStateNormal];
-                break;
-            case 2:
-                [btn setTitle:@"礼物说" forState:UIControlStateNormal];
-                break;
-            case 3:
-                [btn setTitle:@"礼物说" forState:UIControlStateNormal];
-                break;
-            default:
-                break;
-        }
-         */
     }
 }
 - (void)btnClick:(KVButton*)btn

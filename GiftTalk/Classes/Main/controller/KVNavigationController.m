@@ -18,16 +18,17 @@
     [super viewDidLoad];
 //    [UINavigationBar appearance];
     // 设置导航栏的图片
-    [self setUp];
+//    [self setUp];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
     // 设置导航栏
-//    [self setNav];
+    [self setNav];
     
     // 设置侧滑返回手势
     self.interactivePopGestureRecognizer.delegate = self;
 }
 
-- (void)setUp
++(void)initialize
 {
     // 设置导航栏的图片
     UINavigationBar *navigationBar = [UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[[self class]]];
@@ -38,14 +39,13 @@
     dict[NSForegroundColorAttributeName] = [UIColor whiteColor];
     dict[NSFontAttributeName] = [UIFont systemFontOfSize:20];
     [navigationBar setTitleTextAttributes:dict];
-    
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"navigationButtonReturn"] style:UIBarButtonItemStylePlain target:self action:@selector(back)];
-    
-    
+
 }
 // 设置导航栏
 - (void)setNav
 {
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"navigationButtonReturn"] style:UIBarButtonItemStylePlain target:self action:@selector(back)];
+    
     if (!self.childViewControllers.count) {
         
         UIButton *left = [UIButton buttonWithType:UIButtonTypeCustom];

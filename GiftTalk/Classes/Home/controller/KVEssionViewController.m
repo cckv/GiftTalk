@@ -131,7 +131,7 @@
     CGFloat scrollconW = 70 * 6 + 10;
     scrollView2.frame = CGRectMake(0, 120, scrollconW, 80);
     [headerView addSubview:scrollView2];
-    scrollView2.contentSize = CGSizeMake(480, 0);
+    scrollView2.contentSize = CGSizeMake(540, 0);
 
     // 1. 添加按钮
     CGFloat btnW = 60;

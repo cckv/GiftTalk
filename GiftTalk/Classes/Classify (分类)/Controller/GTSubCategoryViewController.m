@@ -42,7 +42,8 @@
 {
     [super viewWillAppear:animated];
 //     获取网络数据
-    self.kindMs;
+
+    [self kindMs];
 
 }
 

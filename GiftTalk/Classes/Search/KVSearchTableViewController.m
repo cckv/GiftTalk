@@ -8,28 +8,122 @@
 
 #import "KVSearchTableViewController.h"
 
+#import "GTSelectGiftVC.h"
+
 @interface KVSearchTableViewController ()<UITextFieldDelegate>
 @property (nonatomic, strong) UITextField *textField;
+@property (nonatomic, strong) NSArray *hot_Arr;
+@property (nonatomic, strong) UIView *headView;
 @end
 
 @implementation KVSearchTableViewController
-
+- (UIView *)headView
+{
+    if (_headView == nil) {
+        _headView = [[UIView alloc]init];
+        UILabel *label = [[UILabel alloc]init];
+        label.text = @"大家都在搜:";
+        [_headView addSubview:label];
+        label.frame = CGRectMake(10, 5, 200, 30);
+        _headView.frame = CGRectMake(0, 0, GTScreenWidth, 160);
+        _headView.backgroundColor = [UIColor colorWithRed:50 green:50 blue:50 alpha:1];
+        
+        UIView *contentView = [[UIView alloc]init];
+        [_headView addSubview:contentView];
+        contentView.frame = CGRectMake(0, 30, GTScreenWidth, 120);
+        contentView.backgroundColor = [UIColor blueColor];
+        
+        for (int i = 0; i < self.hot_Arr.count; i++) {
+        
+            int row = i % 4;
+            int col = i / 4;
+            int margin = 10;
+            CGFloat w = (GTScreenWidth - 50)/4;
+            CGFloat h = 30;
+            UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+            btn.backgroundColor = [UIColor redColor];
+            [btn setTitle:self.hot_Arr[i] forState:UIControlStateNormal];
+            [contentView addSubview:btn];
+            btn.frame = CGRectMake(margin+ row * (w+margin), col *(h + margin), w, h);
+        }
+        
+    }
+    return _headView;
+}
+- (NSArray *)hot_Arr
+{
+    if (_hot_Arr == nil) {
+        _hot_Arr = [NSArray array];
+    }
+    return _hot_Arr;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     // 设置导航栏
     [self setNav];
+    
+    self.tableView.bounces = NO;
+    
+//    self.tableView.contentSize = CGSizeMake(0, GTScreenHeight + 300);
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 220, 0);
+    
 }
+
+- (void)setHeadView
+{
+    self.tableView.tableHeaderView = self.headView;
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.textField becomeFirstResponder];
+    
+//    [self.textField becomeFirstResponder];
+    // 获取数据
+    [self getData];
+    
 }
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    
     [self.textField resignFirstResponder];
 }
+- (instancetype)init
+{
+    if (self = [super initWithStyle:UITableViewStyleGrouped]) {
+
+    }
+    return self;
+}
+
+- (void)getData
+{
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    NSMutableDictionary *parameters = nil;
+    
+    [manager GET:@"http://api.liwushuo.com/v2/search/hot_words?" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary*  _Nullable responseObject) {
+        
+        NSDictionary *dict = responseObject[@"data"];
+        
+        self.textField.placeholder = dict[@"placeholder"];
+        
+        self.hot_Arr = dict[@"hot_words"];
+        
+        [self setHeadView];
+        
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@",error);
+        
+    }];
+}
+
 // 设置导航栏
 - (void)setNav
 {
@@ -92,13 +186,13 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return 1;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -107,52 +201,22 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%zd",indexPath.row];
+    cell.textLabel.text = @"选礼神器";
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    GTSelectGiftVC *selectVc = [[GTSelectGiftVC alloc]init];
+    [self.navigationController pushViewController:selectVc animated:YES];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 30;
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
+//-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+//{
+//    [self.textField endEditing:YES];
+//}
 @end
