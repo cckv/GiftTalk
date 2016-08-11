@@ -14,8 +14,8 @@
 #import "KVSubGiftCollectionViewCell.h"
 
 @interface GTSubGiftCollectionViewController ()
-
-@property (nonatomic,strong) NSArray *itemMs;
+@property(nonatomic,assign)int offset;
+@property (nonatomic,strong) NSMutableArray *itemMs;
 
 @end
 
@@ -37,8 +37,8 @@ static NSString * const reuseIdentifier = @"giftDetailCell";
     [super viewDidLoad];
     
     // 获取网络数据
-    [self getData];
-    
+    [self getData:0];
+
     // 设置滚动条隐藏
     self.collectionView.showsVerticalScrollIndicator = NO;
     
@@ -57,17 +57,32 @@ static NSString * const reuseIdentifier = @"giftDetailCell";
     // Register cell classes
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([KVSubGiftCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
 
+    
+    self.offset = 0;
+    
+    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+        [self getData:self.offset];
+        
+    }];
+    self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        
+        self.offset += 50;
+        [self getData:self.offset];
+        
+    }];
+    
 }
 
 // 获取网络数据
-- (NSArray*)getData
+- (NSArray*)getData:(int)offset
 {
     [SVProgressHUD showWithStatus:@"正在加载数据..."];
     GTSubCategoryItem *subItem = self.subItem;
     NSLog(@"%ld",subItem.ID);
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
 
-    NSString *urlStr = [NSString stringWithFormat:@"http://api.liwushuo.com/v2/item_subcategories/%ld/items?limit=20&offset=0",(long)subItem.ID];
+    NSString *urlStr = [NSString stringWithFormat:@"http://api.liwushuo.com/v2/item_subcategories/%ld/items?limit=20&offset=%d",(long)subItem.ID,offset];
 
     [manager GET:urlStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
@@ -77,12 +92,29 @@ static NSString * const reuseIdentifier = @"giftDetailCell";
         NSDictionary *data = dict[@"data"];
         NSArray *items = data[@"items"];
         
-        _itemMs = [GTGiftDetailItem mj_objectArrayWithKeyValuesArray:items];
+        NSArray *arr = [GTGiftDetailItem mj_objectArrayWithKeyValuesArray:items];
+        
+        [self.itemMs addObjectsFromArray:arr];
+        
         [self.collectionView reloadData];
         [SVProgressHUD dismiss];
+        if (self.offset == 0) {
+            
+            [self.collectionView.mj_header endRefreshing];
+        }else
+        {
+            [self.collectionView.mj_footer endRefreshing];
+        }
 
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);
+        if (self.offset == 0) {
+            
+            [self.collectionView.mj_header endRefreshing];
+        }else
+        {
+            [self.collectionView.mj_footer endRefreshing];
+        }
         
     }];
     return _itemMs;
@@ -146,10 +178,10 @@ static NSString * const reuseIdentifier = @"giftDetailCell";
 
 #pragma make -------懒加载
 // 数据模型的加载
-- (NSArray *)itemMs
+- (NSMutableArray *)itemMs
 {
     if (_itemMs == nil) {
-        _itemMs = [self getData];
+        _itemMs = [NSMutableArray array];
     }
     return _itemMs;
 }

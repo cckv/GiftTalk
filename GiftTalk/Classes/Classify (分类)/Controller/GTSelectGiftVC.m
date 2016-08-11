@@ -57,14 +57,14 @@ static NSString * const ID = @"selCollctionCell";
     // 获取网络数据
     [self getData];
     
-    self.contentData;
+//    self.contentData;
+    [self getContentData];
     // 添加影藏这的,包含分类类别的 view
 //    [self.view addSubview:self.categoryView];
     
     // 设置背景颜色
     self.view.backgroundColor = [UIColor lightGrayColor];
     
-
     
     // 模型关键字的替换
     [GTHeadDataItem mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
@@ -295,7 +295,8 @@ static NSString * const ID = @"selCollctionCell";
     // 跳转的控制器
     KVHtmlViewController *htmlVc = [[KVHtmlViewController alloc]init];
     htmlVc.title = item.name;
-
+    
+    [self.navigationController pushViewController:htmlVc animated:YES];
 }
 
 //返回这个UICollectionView是否可以被选择
